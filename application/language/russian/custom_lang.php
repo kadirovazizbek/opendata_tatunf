@@ -5,11 +5,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //team
 $lang['title_name'] = 'Анализатор сообщений | Специально для Wincode';
 
-//slide
-$lang['welcome_text'] = 'Добро пожаловать в <a href="https://t.me/message_analyzer_bot"><span>Analyzer Bot</span></a>';
-$lang['Venkon'] = 'Анализатор сообщений | Специально для Wincode';
-$lang['hello_text'] = 'Скажи Привет <a href="https://t.me/message_analyzer_bot"><span>Analyzer Bot</span></a>';
-$lang['button_start_name'] = 'Начать сейчас';
+
+
 
 
 // menu
@@ -26,13 +23,9 @@ $lang['menu_rus'] = 'РУ';
 $lang['menu_en'] = 'EN';
 
 
- //our sevices
-$lang['our_services_title'] = 'Наши сервисы';
+ 
 
 
-//about us
-$lang['about_us_title'] = 'О нас';
-$lang['about_us_text'] = 'Мы представитили Нукуского филиала Ташкентского Университета Информационных Технологий имени Мухаммада Аль-Хорезмий ';
 
 //team
 $lang['team_title'] = 'Наша команда';
@@ -46,7 +39,7 @@ $lang['Turimbetov'] = 'Бахыт Турымбетов';
 $lang['Turimbetov_info'] = 'Разработчик';
 
 //contact
-$lang['contact_us_title'] = 'Связаться с нами';
+$lang['contact_us_title'] = 'Наш адрес';
 // views/feedback.php
 $lang['feedback_heading'] = 'Связаться с нами';
 $lang['feedback_name'] = 'Имя';
@@ -82,22 +75,18 @@ $lang['table_status']= 'Статус';
 $lang['table_actions']= 'Операции';
 $lang['table_users']= 'Пользователи';
 
-//homepage.php
-$lang['adress'] = 'Адрес';
-$lang['adress_text'] = 'Шота Руставели 53Б';
-$lang['phone'] = 'Телефон';
-$lang['email'] = 'Email';
-$lang['web_site'] = 'Веб-сайт';
-$lang['message'] = 'Сообщения';
-$lang['audio'] = 'Аудио сообщения';
-$lang['text_message'] = 'Просматривайте сообщения пользователей в веб-интерфейсе с интеллектуальной оценкой';
-$lang['stat_all'] = 'Статистика групп';
-$lang['text_stat_all'] = 'Графическая статистика сообщений по вашим группам';
-$lang['stat'] = 'Cтатистика за период';
-$lang['text_stat'] = 'Узнайте, сколько позитивных и негативных сообщений оставили пользователи за последнее время';
-$lang['text_users'] = 'Добавляйте администраторов через веб-интерфейс';
-$lang['text_audio'] = 'Просматривайте аудио сообщения в текстовом виде';
-$lang['text_home'] = 'Перейти на главную';
 
+//team
+$lang['t_azizbek'] = 'Кадыров Азизбек';
+$lang['t_text_azizbek'] = 'Лидер & Back-end Разработчик';
+$lang['t_alibek'] = 'Ембергенов Алибек';
+$lang['t_text_alibek'] = 'Front-end Разработчик';
+$lang['t_allaniyaz'] = 'Нурахимов Алланияз';
+$lang['t_text_allaniyaz'] = 'Back-end Разработчик';
+$lang['t_baxit'] = 'Турымбетов Бахыт';
+$lang['t_text_baxit'] = 'Back-end Разработчик';
+
+//copyright
+$lang['copyright'] = '© 2018 Open Data Ташкент . Все Права Защищены | Design by TATU NF Team';
 
 
