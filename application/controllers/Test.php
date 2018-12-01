@@ -22,9 +22,10 @@ class Test extends CI_Controller
             if(is_array($response->entities) && count($response->entities)>0){
                 switch(strtolower($response->entities[0]->value)){
                     case "tashkent":
-                        
+                        echo "Tashkent hotels:";
                         break;
                     case "samarkand":
+                    echo "Samarkand hotels:";
                         break;
                 }
             }
