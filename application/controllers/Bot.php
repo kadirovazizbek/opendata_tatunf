@@ -207,7 +207,7 @@ class Bot extends CI_Controller{
 
 					$text = "";
 					foreach ($hotels as $h) {
-						$text .= '\r\n'.$h->name;
+						$text .= "\r\n".$h->name;
 					}
 					
 					$this->bot_lib->send_message($item->chat_id, $price . " " . $city . " hotels: ".$text);
