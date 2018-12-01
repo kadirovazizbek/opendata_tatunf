@@ -5,6 +5,7 @@ class Bot extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		$this->load->library('bot_lib');
+		$this->load->library('data_lib');
 	}
 
 	public function updates(){
