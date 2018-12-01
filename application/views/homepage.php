@@ -124,6 +124,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><a href="codes"><?php echo lang('menu_codes'); ?></a></li>	
 								<li><a href="gallery"><?php echo lang('menu_gallery'); ?></a></li>
 								<li><a href="contact"><?php echo lang('menu_feedback'); ?></a></li>
+								<li><?php echo anchor($this->lang->switch_uri('ru'),'<img width="30" src="/assets/images/ru-flag.png">') ;?></li>
+						<li><?php echo anchor($this->lang->switch_uri('uz'),'<img width="30"  src="/assets/images/uz-flag.png">');?></li> 
 								<div class="clearfix"> </div>
 							</ul>	
 						</div>	
@@ -184,8 +186,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="about">
 		<div class="container">
 			<div class="w3l-about-heading">
-				<h2>Smart Road</h2>
-				<p>siz bul jerden har turli tarawlardagi magliwmatlardi alsaniz boladi</P>
+				<h2><?php echo lang('smart_uslugi');?></h2>
+				
 			</div>
 			<div class="about-grids">
 				<div class="col-md-3 about-grid">
@@ -205,7 +207,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="col-md-3 about-grid">
 					<div class="about-grid-info about-grid-info3 effect-1">
-						<h4>New Zealand</h4>
+					<a href="temperature">	<h4>Temperature</h4> </a>
 					</div>
 				</div>
 				<div class="clearfix"> </div>

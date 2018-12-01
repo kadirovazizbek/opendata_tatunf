@@ -95,3 +95,5 @@ $lang['new_events']= 'Новости и Событие';
 $lang['address']= 'Адрес';
 $lang['pages']= 'Страницы';
 $lang['follow']= 'Подписаться';
+$lang['smart_uslugi']= 'Умные предложения';
+

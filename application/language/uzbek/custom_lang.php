@@ -84,6 +84,10 @@ $lang['address']= 'Манзил';
 $lang['pages']= 'Сахифалар';
 $lang['follow']= 'Обуна болиш';
 
+$lang['smart_uslugi']= 'Смарт таклифлар';
+
+
+
 
 
 

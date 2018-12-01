@@ -223,7 +223,7 @@ ul.nav.navbar-nav {
     margin: 4em 0 0 0;
 }
 .about-grid{
-	text-align:center;
+	text-align:bottom;
 }
 .about-grid-info{
     background: url(../images/a.png)no-repeat 0px 0px;
@@ -231,11 +231,13 @@ ul.nav.navbar-nav {
     min-height: 255px;
 }
 .about-grid-info h4{
-    color: rgb(7, 136, 18);
+    color: rgb(13, 14, 13);
     font-size: 2em;
     margin: 0;
     font-family: 'Pacifico', cursive;
-    line-height: 7.5em;
+	line-height: 7.5em;
+	text-align: center;
+	
 }
 .about-grid-info1{
 	background: url(../images/a1.png)no-repeat 0px 0px;
