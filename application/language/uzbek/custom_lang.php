@@ -8,11 +8,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 //
-$lang['menu_homepage'] = 'Бош саҳифа';
+$lang['menu_home'] = 'Бош саҳифа';
 $lang['menu_about'] = 'Биз ҳаққимизда';
 $lang['menu_services'] = 'Сервислар';
 $lang['menu_help'] = 'Ёрдам';
-$lang['menu_codes'] = 'Bir zat';
+$lang['menu_codes'] = 'Кодлар';
 $lang['menu_gallery'] = 'Галерея';
 $lang['menu_notify'] = 'Эслатма';
 $lang['menu_feedback'] = 'Қайта алоқа';
@@ -77,3 +77,13 @@ $lang['t_text_baxit'] = 'Back-end Дастурчи';
 
 //copyright
 $lang['copyright'] = '© 2018 Open Data Ташкент . Барча хукуклар химояланган | TATU NF Team Томонидан яратилган';
+
+$lang['panorama_city'] = 'Шахар Панорамаси';
+$lang['new_events']= 'Янгиликлар ва Тадбирлар';
+$lang['address']= 'Манзил';
+$lang['pages']= 'Сахифалар';
+$lang['follow']= 'Обуна болиш';
+
+
+
+

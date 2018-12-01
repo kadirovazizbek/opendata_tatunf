@@ -230,7 +230,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="news">
 		<div class="container">
 			<div class="news-heading">
-				<h3>News & Events</h3>
+				<h3><?php echo lang('new_events');?></h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta efficitur ante quis volutpat.</p>
 			</div>
 			<div class="news-grids">
@@ -298,16 +298,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<p>Aliquam erat volutpat. Duis vulputate tempus laoreet. Integer viverra eleifend neque, eget dictum lectus. Quisque eu tempor dolor.</p>
 							
 							</div>
-							
+							</br>	</br>
 						</div>
 						
 					</div>
 					
-				</div><div class="news">
+				</div>
+				<div class="news">
+				
 		<div class="container">
 			<div class="news-heading">
-				<div class="news-heading"><h3>Panorama's City</h3>
-				<p>Smart panorama aakdjksjakj</p>
+			
+				<div class="news-heading"><h3><?php echo lang('panorama_city');?></h3>
+					</br>
 				<div class="clearfix">
 				
 
@@ -341,12 +344,12 @@ $preview_name = str_replace(".jpg","_thumbnail.jpg",$pano->path);
 	<div class="footer">
 		<div class="container">
 			<div class="footer-grids">
-				<div class="col-md-3 footer-grid">
+				<div class="col-md-4 footer-grid">
 					<div class="footer-grid-heading">
-						<h4>Address</h4>
+						<h4><?php echo lang('address');?></h4>
 					</div>
 					<div class="footer-grid-info">
-						<p>Eiusmod Tempor inc
+						<p>
 							<span>Inha University of Tashkent.</span>
 						</p>
 						<p class="phone">Phone : +1 123 456 789
@@ -354,9 +357,9 @@ $preview_name = str_replace(".jpg","_thumbnail.jpg",$pano->path);
 						</p>
 					</div>
 				</div>
-				<div class="col-md-3 footer-grid">
+				<div class="col-md-4 footer-grid">
 					<div class="footer-grid-heading">
-						<h4>Navigation</h4>
+						<h4><?php echo lang('pages');?></h4>
 					</div>
 					<div class="footer-grid-info">
 						<ul>
@@ -369,28 +372,17 @@ $preview_name = str_replace(".jpg","_thumbnail.jpg",$pano->path);
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-3 footer-grid">
+				<div class="col-md-4 footer-grid">
 					<div class="footer-grid-heading">
-						<h4>Follow</h4>
+						<h4><?php echo lang('follow');?></h4>
 					</div>
 					<div class="social">
 						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-rss"></i></a></li>
-							<li><a href="#"><i class="fa fa-vk"></i></a></li>
+							<li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
+							
+							<li><a href="http://vk.com"><i class="fa fa-vk"></i></a></li>
 						</ul>
-					</div>
-				</div>
-				<div class="col-md-3 footer-grid">
-					<div class="footer-grid-heading">
-						<h4>Newsletter</h4>
-					</div>
-					<div class="footer-grid-info">
-						<form action="#" method="post">
-							<input type="email" id="mc4wp_email" name="EMAIL" placeholder="Enter your email here" required="">
-							<input type="submit" value="Subscribe">
-						</form>
 					</div>
 				</div>
 				<div class="clearfix"> </div>

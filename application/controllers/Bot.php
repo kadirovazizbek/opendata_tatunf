@@ -5,6 +5,7 @@ class Bot extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		$this->load->library('bot_lib');
+		$this->load->library('data_lib');
 	}
 
 	public function updates(){
@@ -105,7 +106,22 @@ class Bot extends CI_Controller{
 			$this->bot_lib->send_message($chat_id,'You were blocked by LugatBot due to reason: '.$blacklist['comment']);
 			die();
 		}
-        
+		
+		$response = json_decode($this->data_lib->watson($message));
+		if(is_array($response->intents) && $response->intents[0]->intent == "hotel_suggestion"){
+            if(is_array($response->entities) && count($response->entities)>0){
+                switch(strtolower($response->entities[0]->value)){
+                    case "tashkent":
+                        $this->bot_lib->send_message($chat_id,"Tashkent hotels:");
+                        break;
+                    case "samarkand":
+						$this->bot_lib->send_message($chat_id,"Samarkand hotels:");
+                        break;
+                }
+            }
+            
+        }
+
 		if (strlen($message) > 0 && $message[0] == '/'){
             $command = $this->bot_lib->detect_command($message);
 			$this->bot_lib->save_last_command($item,$command);
@@ -151,31 +167,11 @@ class Bot extends CI_Controller{
 	{
 		$messages = $this->db->where('processed', 0)->where('in',1)->limit(10)->order_by('id','desc')->get('bot')->result();
 		foreach($messages as $item){
-			if(strlen($item->message) < 5) continue;
-			$config = array();
-			$config['credentials']['key'] = 'AKIAIIR2XYGYBO2LGZ5A';
-			$config['credentials']['secret'] = '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';
-			$config['region'] = 'us-east-1';
-			$config['version'] = 'latest';
 			
-			$comprehend = \Aws\Comprehend\ComprehendClient::factory($config);
-			$result = $comprehend->detectSentiment([
-				'LanguageCode' => 'en',
-				'Text'		   => $item->message,
-			]);
 			$update = [
-				'positive' => $result['SentimentScore']['Positive'],
-				'negative' => $result['SentimentScore']['Negative'],
-				'neutral' => $result['SentimentScore']['Neutral'],
-				'mixed' => $result['SentimentScore']['Mixed'],
-				'processed' => 1,
+				'processed' => 0,
 			];
 			$this->db->where('id', $item->id)->update('bot', $update);
-			if($result['SentimentScore']['Negative'] > 0.95){
-				//$this->db->where('id', $item->id)->delete('bot');
-				$this->bot_lib->delete_message($item->chat_id,$item->message_id);
-			}
-
 		}
 		//print_r($messages);
 	}

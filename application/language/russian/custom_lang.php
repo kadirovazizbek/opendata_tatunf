@@ -90,3 +90,8 @@ $lang['t_text_baxit'] = 'Back-end Разработчик';
 $lang['copyright'] = '© 2018 Open Data Ташкент . Все Права Защищены | Design by TATU NF Team';
 
 
+$lang['panorama_city'] = 'Панорама Города';
+$lang['new_events']= 'Новости и Событие';
+$lang['address']= 'Адрес';
+$lang['pages']= 'Страницы';
+$lang['follow']= 'Подписаться';
