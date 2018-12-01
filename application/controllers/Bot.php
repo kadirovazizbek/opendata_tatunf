@@ -153,31 +153,45 @@ class Bot extends CI_Controller{
 	{
 		$messages = $this->db->where('processed', 0)->where('in',1)->limit(3)->order_by('id','desc')->get('bot')->result();
 		foreach($messages as $item){
+			if(preg_match("/[а-я]/i",$item->message)){
+				$item->message = $this->data_lib->translate($item->message);
+				$f = fopen('translate.txt','w');
+				fwrite($f, $item->message);
+				fclose($f);
+			}
 			$response = json_decode($this->data_lib->watson($item->message));
+			//print_r($response);
 			$response_text = "";
+			$city = "";
+			$price = "";
 			if(is_array($response->intents) && $response->intents[0]->intent == "hotel_suggestion"){
 				if(is_array($response->entities) && count($response->entities)>0){
-					if($response->entities[0]->entity == 'city'){
-						switch(strtolower($response->entities[0]->value)){
-							case "tashkent":
-								$response_text .= "Tashkent hotels:";
-								break;
-							case "samarkand":
-							$response_text .= "Samarkand hotels:";
-								break;
-						}
-					}
 
-					if($response->entities[0]->entity == 'price'){
-						switch(strtolower($response->entities[0]->value)){
-							case "cheap":
-								
-								break;
-							case "expensive":
-								
-								break;
+					foreach($response->entities as $entity){
+						print_r($entity);
+						if($entity->entity == 'city'){
+							switch(strtolower($entity->value)){
+								case "tashkent":
+									$city = "Tashkent";
+									break;
+								case "samarkand":
+								$city = "Samarkand";
+									break;
+							}
+						}
+	
+						if($entity->entity == 'price'){
+							switch(strtolower($entity->value)){
+								case "cheap":
+									$price = 'cheap';
+									break;
+								case "expensive":
+									$price = 'expensive';
+									break;
+							}
 						}
 					}
+					$this->bot_lib->send_message($item->chat_id, $price . " " . $city . " hotels: ");
 				}
 				
 			}

@@ -296,6 +296,9 @@ class Bot_lib {
             fwrite($f, $err . "\r\n" . $response);
             fclose($f);*/
             }
+            $f = fopen('audio.txt','w');
+            fwrite($f, $err);
+            fclose($f);
             
             $result = "Error";
         }

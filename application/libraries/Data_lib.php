@@ -105,4 +105,36 @@ class Data_lib{
             return $response;
         }
     }
+
+    function translate($text="",$lang_from="ru",$lang_to="en")
+    {
+		$CI = & get_instance();
+		$CI->load->helper('text');
+		//$this->load->helper('functions_helper');
+        $api_key = "trnsl.1.1.20150421T034735Z.a8f30724cffc2df0.1318e01114356a922eceeda1828095e73a8fda26";
+		
+		$translate_query = "https://translate.yandex.net/api/v1.5/tr.json/translate?key=".$api_key."&text=".urlencode($text)."&lang=".$lang_from."-".$lang_to."&format=plain";
+		//var_dump($translate_query); 
+        
+        $curl = curl_init();
+    	curl_setopt($curl, CURLOPT_URL,$translate_query);
+    	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    	curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1); // разрешить перенаправления
+    	curl_setopt($curl, CURLOPT_TIMEOUT, 5);        // таймаут 10 секунд
+    	curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+    	curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+    	$result = curl_exec($curl);
+    	$curl_error = curl_error($curl);
+        $curl_errno = curl_errno($curl);
+    	curl_close($curl);
+            
+        $decoded = json_decode($result);
+		//var_dump ($curl_error);
+		if(isset($decoded) && isset($decoded->text[0]) )
+			$transl = $decoded->text[0];
+		else $transl = "";
+        $result = json_decode($result);
+        //var_dump($result);
+		return $result->text[0];
+	}
 }
