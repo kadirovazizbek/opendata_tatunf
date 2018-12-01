@@ -33,11 +33,12 @@ html, body{
 }
 .top-banner-left ul li{
 	display:inline-block;
-	color:#fff;
+	color:rgb(197, 8, 8);
 	font-size:.875em;
+	text-shadow:  8px 8px 16px black;
 }
 .top-banner-left ul li a{
-    color: #fff;
+    color: rgb(173, 12, 12);
     font-size: 1em;
 }
 .top-banner-left ul li:nth-child(2) {
@@ -62,13 +63,13 @@ html, body{
 	margin-right:0;
 }
 .top-banner-right ul li a{
-	color:#fff;
+	color:rgb(160, 9, 9);
 	font-size:1em;
-	text-shadow: darkred;
+	text-shadow:  8px 8px 16px black;
 }
 .top-banner-right ul li a:hover{
 	color:#fd5c63;
-	text-shadow: darkred;
+	
 }
 .navbar-default {
     border: none !important;
@@ -119,14 +120,16 @@ ul.nav.navbar-nav {
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     background: none !important;
     border-right: solid 1px #EFEFEF;
-    box-shadow: 1px 0px 0px 0px rgba(72, 72, 72, 0);
+	box-shadow: 1px 0px 0px 0px rgba(72, 72, 72, 0);
+	
 }
 .top-nav ul li a{
-    color: #fff !important;
-    font-size: 1em;
+    color: rgb(168, 61, 61) !important;
+    font-size: 1.5em;
     margin: 0;
     text-decoration: none;
-    padding: 0;
+	padding: 0;
+	text-shadow:  8px 8px 16px black;
 }
 .top-nav ul li a:hover{
     color: #fd5c63 !important;
@@ -169,16 +172,18 @@ ul.nav.navbar-nav {
 	 
 }
 .slider-grid h3{
-    color: rgba(238, 234, 234, 0.71);
+    color: rgba(35, 184, 6, 0.71);
     font-size: 3em;
     margin: 0;
-    font-family: 'Pacifico', cursive;
+	font-family: 'Pacifico', cursive;
+	
 }
 .slider-grid p{
-    color: rgba(238, 234, 234, 0.71);
-    font-size: .875em;
+    color: rgba(9, 82, 30, 0.71);
+    font-size: 1.3em;
     width: 84%;
-    margin: 2em auto 0;
+	margin: 2em auto 0;
+	text-shadow: 8px 8px 16px rgb(94, 11, 189);
 }
 .copyright{
 	margin:1em 0 0 0;
@@ -187,10 +192,10 @@ ul.nav.navbar-nav {
 .copyright p{
 	margin: 0;
     font-size: .875em;
-    color: #BBBBBB;
+    color: rgb(17, 13, 226);
 }
 .copyright p a{
-	color: #BBBBBB;
+	color: rgb(15, 6, 153);
 }
 .copyright p a:hover{
 	color: #fd5c63;
@@ -422,14 +427,14 @@ ul.nav.navbar-nav {
 .footer-grid-info  p{
 	margin:0;
     font-size: .875em;
-    color: #BBBBBB;
+    color: rgb(182, 26, 26);
     line-height: 1.8em;
 }
 .footer-grid-info p span{
 	display:block;
 }
 .footer-grid-info p span a{
-    color: #BBBBBB;	
+    color: rgb(85, 48, 221);	
 	text-decoration:none;
 }
 .footer-grid-info p span a:hover{
@@ -444,12 +449,12 @@ ul.nav.navbar-nav {
 }
 .footer-grid-info ul li a{
     font-size: .875em;
-    color: #BBBBBB;
+    color: rgb(233, 8, 8);
     line-height: 1.8em;
 	text-decoration:none;
 }
 .footer-grid-info ul li a:hover{
-	color:#fd5c63;
+	color:#0c0a0a;
 }
 .social-grid{
     margin: 1em 0 0 0;	
@@ -570,7 +575,7 @@ ul.nav.navbar-nav {
     background: #fff;
     box-shadow: none !important;
     padding: 10px 10px;
-    color: #BBBBBB;
+    color: rgb(16, 19, 199);
     font-size: .875em;
     width: 100% !important;
     font-weight: 400;
