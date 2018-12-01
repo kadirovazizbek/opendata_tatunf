@@ -193,7 +193,7 @@ class Bot extends CI_Controller{
 					}
 
 					if($city == 'Samarkand') {
-						if($price == 'expensive') 
+						if($price == 'cheap') 
 							$hotels = $this->db->query("select name,level,tel from `hotel_samarkand` where level='B&B' or level='*' limit 10")->result();
 						else
 							$hotels = $this->db->query("select name,level,tel from `hotel_samarkand` where level='**' or level='***' or level='****' order by length(level) desc limit 10")->result();
