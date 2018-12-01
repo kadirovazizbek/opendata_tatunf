@@ -23,7 +23,7 @@ class Bot_lib {
         $opts = array(
                 'chat_id'=>$chat_id,
                 'text'=>$message,
-                'parse_mode'=>'HTML',
+                'parse_mode'=>'Markdown',
             );
         if ($reply_markup !== FALSE) $opts['reply_markup'] = $reply_markup;
         else {
