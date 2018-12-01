@@ -107,21 +107,7 @@ class Bot extends CI_Controller{
 			die();
 		}
 		
-		$response = json_decode($this->data_lib->watson($message));
-		if(is_array($response->intents) && $response->intents[0]->intent == "hotel_suggestion"){
-            if(is_array($response->entities) && count($response->entities)>0){
-                switch(strtolower($response->entities[0]->value)){
-                    case "tashkent":
-                        $this->bot_lib->send_message($chat_id,"Tashkent hotels:");
-                        break;
-                    case "samarkand":
-						$this->bot_lib->send_message($chat_id,"Samarkand hotels:");
-                        break;
-                }
-            }
-            
-        }
-
+		
 		if (strlen($message) > 0 && $message[0] == '/'){
             $command = $this->bot_lib->detect_command($message);
 			$this->bot_lib->save_last_command($item,$command);
@@ -165,11 +151,39 @@ class Bot extends CI_Controller{
 	}
 	public function worker()
 	{
-		$messages = $this->db->where('processed', 0)->where('in',1)->limit(10)->order_by('id','desc')->get('bot')->result();
+		$messages = $this->db->where('processed', 0)->where('in',1)->limit(3)->order_by('id','desc')->get('bot')->result();
 		foreach($messages as $item){
-			
+			$response = json_decode($this->data_lib->watson($item->message));
+			$response_text = "";
+			if(is_array($response->intents) && $response->intents[0]->intent == "hotel_suggestion"){
+				if(is_array($response->entities) && count($response->entities)>0){
+					if($response->entities[0]->entity == 'city'){
+						switch(strtolower($response->entities[0]->value)){
+							case "tashkent":
+								$response_text .= "Tashkent hotels:";
+								break;
+							case "samarkand":
+							$response_text .= "Samarkand hotels:";
+								break;
+						}
+					}
+
+					if($response->entities[0]->entity == 'price'){
+						switch(strtolower($response->entities[0]->value)){
+							case "cheap":
+								
+								break;
+							case "expensive":
+								
+								break;
+						}
+					}
+				}
+				
+			}
+
 			$update = [
-				'processed' => 0,
+				'processed' => 1,
 			];
 			$this->db->where('id', $item->id)->update('bot', $update);
 		}
