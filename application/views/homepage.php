@@ -220,7 +220,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h4>Today Best offers</h4>
 				<p>Sed vitae purus ut libero malesuada molestie imperdiet a nibh. Etiam consectetur odio a massa vulputate porttitor. Quisque nibh orci, vestibulum sed gravida vel, eleifend nec libero. </p>
 				<div class="click-button">
-					<a href="single.html">Click Here</a>
+					<a href="single">Click Here</a>
 				</div>
 			</div>
 		</div>
@@ -237,7 +237,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-4 news-grid">
 					<div class="agile-news-grid-info">
 						<div class="news-grid-info-img">
-							<a href="single.html"><img src="/assets/images/n1.jpg" alt="" /></a>
+							<a href="single"><img src="/assets/images/n1.jpg" alt="" /></a>
 						</div>
 						<div class="news-grid-info-bottom">
 							<div class="date-grid">
@@ -250,7 +250,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="clearfix"> </div>
 							</div>
 							<div class="news-grid-info-bottom-text">
-								<a href="single.html">Quisque gravida, nunc eu interdum porta</a>
+								<a href="single">Quisque gravida, nunc eu interdum porta</a>
 								<p>Aliquam erat volutpat. Duis vulputate tempus laoreet. Integer viverra eleifend neque, eget dictum lectus. Quisque eu tempor dolor.</p>
 							</div>
 						</div>
@@ -259,7 +259,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-4 news-grid">
 					<div class="agile-news-grid-info">
 						<div class="news-grid-info-img">
-							<a href="single.html"><img src="/assets/images/n2.jpg" alt="" /></a>
+							<a href="single"><img src="/assets/images/n2.jpg" alt="" /></a>
 						</div>
 						<div class="news-grid-info-bottom">
 							<div class="date-grid">
@@ -272,7 +272,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="clearfix"> </div>
 							</div>
 							<div class="news-grid-info-bottom-text">
-								<a href="single.html">Quisque gravida, nunc eu interdum porta</a>
+								<a href="single">Quisque gravida, nunc eu interdum porta</a>
 								<p>Aliquam erat volutpat. Duis vulputate tempus laoreet. Integer viverra eleifend neque, eget dictum lectus. Quisque eu tempor dolor.</p>
 							</div>
 						</div>
@@ -281,7 +281,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-4 news-grid">
 					<div class="agile-news-grid-info">
 						<div class="news-grid-info-img">
-							<a href="single.html"><img src="/assets/images/n3.jpg" alt="" /></a>
+							<a href="single"><img src="/assets/images/n3.jpg" alt="" /></a>
 						</div>
 						<div class="news-grid-info-bottom">
 							<div class="date-grid">
@@ -294,7 +294,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="clearfix"> </div>
 							</div>
 							<div class="news-grid-info-bottom-text">
-								<a href="single.html">Quisque gravida, nunc eu interdum porta</a>
+								<a href="single">Quisque gravida, nunc eu interdum porta</a>
 								<p>Aliquam erat volutpat. Duis vulputate tempus laoreet. Integer viverra eleifend neque, eget dictum lectus. Quisque eu tempor dolor.</p>
 							
 							</div>
@@ -347,7 +347,7 @@ $preview_name = str_replace(".jpg","_thumbnail.jpg",$pano->path);
 					</div>
 					<div class="footer-grid-info">
 						<p>Eiusmod Tempor inc
-							<span>St Dolore Place,Kingsport 56777.</span>
+							<span>Inha University of Tashkent.</span>
 						</p>
 						<p class="phone">Phone : +1 123 456 789
 							<span>Email : <a href="mailto:example@email.com">mail@example.com</a></span>
@@ -360,10 +360,12 @@ $preview_name = str_replace(".jpg","_thumbnail.jpg",$pano->path);
 					</div>
 					<div class="footer-grid-info">
 						<ul>
-							<li><a href="about.html">About</a></li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="gallery.html">Gallery</a></li>
-							<li><a href="contact.html">Contact</a></li>
+						<li><a href="homepage"><?php echo lang('menu_home'); ?></a></li>
+						<li><a href="about"><?php echo lang('menu_about'); ?></a></li>
+						<li><a href="services"><?php echo lang('menu_services'); ?></li>
+						<li><a href="codes"><?php echo lang('menu_codes'); ?></a></li>	
+						<li><a href="gallery"><?php echo lang('menu_gallery'); ?></a></li>
+						<li><a href="contact"><?php echo lang('menu_feedback'); ?></a></li>
 						</ul>
 					</div>
 				</div>

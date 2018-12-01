@@ -14,22 +14,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!--// bootstrap-css -->
 <!-- css -->
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="all" />
 <!--// css -->
 <!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="/assets/css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons -->
 <!-- font -->
 <link href='//fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <!-- //font -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="/assets/js/jquery-1.11.1.min.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
 <!-- parallax -->
-<script src="js/SmoothScroll.min.js"></script>
+<script src="/assets/js/SmoothScroll.min.js"></script>
 <!-- //parallax -->
 </head>
 <body>
@@ -38,10 +38,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="top-banner about-top-banner">
 			<div class="container">
 				<div class="top-banner-left">
-					<ul>
-						<li><i class="fa fa-phone" aria-hidden="true"></i> +1 234 567 8901</li>
-						<li><a href="mailto:example@email.com"><i class="fa fa-envelope" aria-hidden="true"></i> mail@example.com</a></li>
-					</ul>
+				<ul>
+				<li> TATU NF TEAM</li>
+				
+			</ul>
 				</div>
 				<div class="top-banner-right">
 					<ul>
@@ -58,7 +58,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="logo">
 					<h1>
-						<a href="index.html">My Trip</a>
+					<a href="homepage">Smart City</a>
 					</h1>
 				</div>
 				<div class="top-nav">
@@ -68,12 +68,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="codes.html">Codes</a></li>	
-								<li><a href="gallery.html">Gallery</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="index">Home</a></li>
+								<li><a href="about">About</a></li>
+								<li><a href="services">Services</a></li>
+								<li><a href="codes">Codes</a></li>	
+								<li><a href="gallery">Gallery</a></li>
+								<li><a href="contact">Contact</a></li>
 								<div class="clearfix"> </div>
 							</ul>	
 						</div>	
@@ -93,7 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="blog-left">
 								<div class="single-left-left">
 									<p>Posted By <a href="#">Admin</a> &nbsp;&nbsp; on June 2, 2016 &nbsp;&nbsp; <a href="#">Comments (10)</a></p>
-									<img src="images/g9.jpg" alt="" />
+									<img src="/assets/images/g9.jpg" alt="" />
 								</div>
 								<div class="blog-left-bottom">
 									<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed blandit massa vel mauris sollicitudin 
@@ -119,7 +119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="media response-info">
 									<div class="media-left response-text-left">
 										<a href="#">
-											<img class="media-object" src="images/t1.jpg" alt="">
+											<img class="media-object" src="/assets/images/t1.jpg" alt="">
 										</a>
 										<h5><a href="#">Admin</a></h5>
 									</div>
@@ -128,12 +128,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 										<ul>
 											<li>June 21, 2016</li>
-											<li><a href="single.html">Reply</a></li>
+											<li><a href="single">Reply</a></li>
 										</ul>
 										<div class="media response-info">
 											<div class="media-left response-text-left">
 												<a href="#">
-													<img class="media-object" src="images/t2.jpg" alt="">
+													<img class="media-object" src="/assets/images/t2.jpg" alt="">
 												</a>
 												<h5><a href="#">Admin</a></h5>
 											</div>
@@ -142,7 +142,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 												<ul>
 													<li>June 21, 2016</li>
-													<li><a href="single.html">Reply</a></li>
+													<li><a href="single">Reply</a></li>
 												</ul>		
 											</div>
 											<div class="clearfix"> </div>
@@ -153,7 +153,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="media response-info">
 									<div class="media-left response-text-left">
 										<a href="#">
-											<img class="media-object" src="images/t3.jpg" alt="">
+											<img class="media-object" src="/assets/images/t3.jpg" alt="">
 										</a>
 										<h5><a href="#">Admin</a></h5>
 									</div>
@@ -162,7 +162,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 										<ul>
 											<li>June 21, 2016</li>
-											<li><a href="single.html">Reply</a></li>
+											<li><a href="single">Reply</a></li>
 										</ul>		
 									</div>
 									<div class="clearfix"> </div>
@@ -236,10 +236,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="footer-grid-info">
 						<ul>
-							<li><a href="about.html">About</a></li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="gallery.html">Gallery</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="about">About</a></li>
+							<li><a href="services">Services</a></li>
+							<li><a href="gallery">Gallery</a></li>
+							<li><a href="contact">Contact</a></li>
 						</ul>
 					</div>
 				</div>

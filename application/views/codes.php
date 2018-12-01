@@ -14,23 +14,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!--// bootstrap-css -->
 <!-- css -->
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="all" />
 <!--// css -->
 <!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="/assets/css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons -->
 <!-- font -->
 <link href='//fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <!-- //font -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="/assets/js/jquery-1.11.1.min.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
 <!-- parallax -->
-	<script src="js/SmoothScroll.min.js"></script>
-	<script src="js/jarallax.js"></script>
+	<script src="/assets/js/SmoothScroll.min.js"></script>
+	<script src="/assets/js/jarallax.js"></script>
 	<!-- //parallax -->
 </head>
 <body>
@@ -39,10 +39,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="top-banner about-top-banner">
 			<div class="container">
 				<div class="top-banner-left">
-					<ul>
-						<li><i class="fa fa-phone" aria-hidden="true"></i> +1 234 567 8901</li>
-						<li><a href="mailto:example@email.com"><i class="fa fa-envelope" aria-hidden="true"></i> mail@example.com</a></li>
-					</ul>
+				<ul>
+				<li> TATU NF TEAM</li>
+				
+			</ul>
 				</div>
 				<div class="top-banner-right">
 					<ul>
@@ -59,7 +59,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="logo">
 					<h1>
-						<a href="index.html">My Trip</a>
+					<a href="homepage">Smart City</a>
 					</h1>
 				</div>
 				<div class="top-nav">
@@ -69,12 +69,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a class="active" href="codes.html">Codes</a></li>	
-								<li><a href="gallery.html">Gallery</a></li>
-								<li><a href="contact.html">Contact</a></li>
+							<li><a href="homepage"><?php echo lang('menu_home'); ?></a></li>
+							<li><a href="about"><?php echo lang('menu_about'); ?></a></li>
+							<li><a href="services"><?php echo lang('menu_services'); ?></li>
+							<li><a href="codes"><?php echo lang('menu_codes'); ?></a></li>	
+							<li><a href="gallery"><?php echo lang('menu_gallery'); ?></a></li>
+							<li><a href="contact"><?php echo lang('menu_feedback'); ?></a></li>
 								<div class="clearfix"> </div>
 							</ul>	
 						</div>	
@@ -89,7 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="codes">
 				<div class="container">
 					<div class="codes-heading">
-						<h2>Short Codes</h2>
+						<h2><?php echo lang('menu_codes'); ?></h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta efficitur ante quis volutpat.</p>
 					</div>
 					<div class="grid_3 grid_4">
@@ -672,7 +672,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="footer-grid-info">
 						<p>Eiusmod Tempor inc
-							<span>St Dolore Place,Kingsport 56777.</span>
+							<span>Inha University of Tashkent.</span>
 						</p>
 						<p class="phone">Phone : +1 123 456 789
 							<span>Email : <a href="mailto:example@email.com">mail@example.com</a></span>
@@ -685,10 +685,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="footer-grid-info">
 						<ul>
-							<li><a href="about.html">About</a></li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="gallery.html">Gallery</a></li>
-							<li><a href="contact.html">Contact</a></li>
+						<li><a href="homepage"><?php echo lang('menu_home'); ?></a></li>
+						<li><a href="about"><?php echo lang('menu_about'); ?></a></li>
+						<li><a href="services"><?php echo lang('menu_services'); ?></li>
+						<li><a href="codes"><?php echo lang('menu_codes'); ?></a></li>	
+						<li><a href="gallery"><?php echo lang('menu_gallery'); ?></a></li>
+						<li><a href="contact"><?php echo lang('menu_feedback'); ?></a></li>
 						</ul>
 					</div>
 				</div>

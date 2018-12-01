@@ -14,23 +14,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!--// bootstrap-css -->
 <!-- css -->
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="all" />
 <!--// css -->
 <!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="/assets/css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons -->
 <!-- font -->
 <link href='//fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <!-- //font -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="/assets/js/jquery-1.11.1.min.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
 <!-- parallax -->
-	<script src="js/SmoothScroll.min.js"></script>
-	<script src="js/jarallax.js"></script>
+	<script src="/assets/js/SmoothScroll.min.js"></script>
+	<script src="/assets/js/jarallax.js"></script>
 	<!-- //parallax -->
 </head>
 <body>
@@ -39,10 +39,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="top-banner about-top-banner">
 			<div class="container">
 				<div class="top-banner-left">
-					<ul>
-						<li><i class="fa fa-phone" aria-hidden="true"></i> +1 234 567 8901</li>
-						<li><a href="mailto:example@email.com"><i class="fa fa-envelope" aria-hidden="true"></i> mail@example.com</a></li>
-					</ul>
+				<ul>
+				<li> TATU NF TEAM</li>
+				
+			</ul>
 				</div>
 				<div class="top-banner-right">
 					<ul>
@@ -59,7 +59,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="logo">
 					<h1>
-						<a href="index.html">My Trip</a>
+						<a href="homepage">Smart City</a>
 					</h1>
 				</div>
 				<div class="top-nav">
@@ -69,12 +69,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li><a href="index.html">Home</a></li>
-								<li><a class="active" href="about.html">About</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="codes.html">Codes</a></li>	
-								<li><a href="gallery.html">Gallery</a></li>
-								<li><a href="contact.html">Contact</a></li>
+							<li><a href="homepage"><?php echo lang('menu_home'); ?></a></li>
+							<li><a href="about"><?php echo lang('menu_about'); ?></a></li>
+							<li><a href="services"><?php echo lang('menu_services'); ?></li>
+							<li><a href="codes"><?php echo lang('menu_codes'); ?></a></li>	
+							<li><a href="gallery"><?php echo lang('menu_gallery'); ?></a></li>
+							<li><a href="contact"><?php echo lang('menu_feedback'); ?></a></li>
 								<div class="clearfix"> </div>
 							</ul>	
 						</div>	
@@ -89,16 +89,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="a-grid">
 		<div class="container">
 			<div class="w3l-about-heading">
-				<h2>About Us</h2>
+				<h2><?php echo lang('menu_about'); ?></h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta efficitur ante quis volutpat.</p>
 			</div>
 			<div class="agileits-a-about-grids">
 				<div class="col-md-5 agileits-a-about-left">
-					<img src="images/a1.jpg" alt="" />
+					<img src="/assets/images/a1.jpg" alt="" />
 				</div>
 				<div class="col-md-7 agileits-a-about-right">
-					<h3>A few words about us</h3>
-					<h4>Praesent et aliquam erat, in pellentesque erat. Nulla massa nisl, vulputate nec urna vel, sagittis rhoncus leo. Donec pharetra congue tellus sed fringilla. Aliquam tellus est, mattis id nulla at, placerat bibendum velit. </h4>
+					<h3>Biz haqqimizda</h3>
+					<h4>Biz haqqimizda sayt haqqinda birzatlar jaziw kerek kop etip bilmimen biraq ne jaziw kerek ekenin aytwir koplew qilip jaziw kerek birzatlardi </h4>
 					<p>Fusce tincidunt vitae purus in interdum. Sed mattis erat vitae nunc dignissim, a facilisis elit porta. Nam a dui id magna tempus tempor. Mauris vel nunc nec ante semper facilisis a sit amet dolor. Aliquam viverra ex felis, consequat condimentum augue ultrices vel. Pellentesque sed nibh ac diam tempor fringilla sit amet a tortor. Praesent sodales sapien turpis.
 						<span>Maecenas vestibulum rhoncus rhoncus. Pellentesque ullamcorper consectetur elit sit amet rhoncus. Maecenas lobortis est vel odio volutpat laoreet. Praesent pharetra interdum lorem, eleifend ullamcorper sapien mattis efficitur. Phasellus sed nisi ultrices, sodales enim non, ullamcorper sapien. Nullam mollis tempus mauris in vulputate.</span>
 					</p>
@@ -118,7 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="w3agile-different-info">
 				<p>Cras vehicula massa id ipsum venenatis, non convallis libero pellentesque. Sed tristique massa et mattis mattis. Nunc euismod consequat ex, eu tincidunt justo malesuada vitae. Sed auctor diam quis nulla hendrerit porta. Quisque venenatis, tortor quis tristique congue, lorem lectus elementum augue, in laoreet lorem justo lacinia velit. Phasellus tempus luctus velit, eu fermentum arcu porttitor sit amet. Suspendisse id efficitur sem. Donec laoreet ante at facilisis dictum. Donec sodales porta orci sed porta. Vivamus est enim, pharetra sit amet placerat ut, eleifend quis purus. Sed elementum tortor erat, placerat rutrum augue facilisis vel. Morbi feugiat tortor erat, nec gravida mauris egestas tincidunt. Sed vitae dignissim sapien.</p>
 				<div class="w3agile-button">
-					<a href="single.html">Read More</a>
+					<a href="single">Read More</a>
 				</div>
 			</div>
 		</div>
@@ -141,59 +141,41 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="team-grids">
 				<div class="col-md-3 agileinfo-team-grid">
-					<img src="images/t1.jpg" alt="" />
+					<img src="/assets/images/t1.jpg" alt="" />
 					<div class="captn">
-						<h4>Mary Jane</h4>
-						<p>Vestibulum </p>
+						<h4><?php echo lang('t_azizbek');?></h4>
+						<p><?php echo lang('t_text_azizbek');?></p>
 						<div class="w3l-social">
-							<ul>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-rss"></i></a></li>
-							</ul>
+							
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 agileinfo-team-grid">
-					<img src="images/t2.jpg" alt="" />
+					<img src="/assets/images/t2.jpg" alt="" />
 					<div class="captn">
-						<h4>Peter Parker</h4>
-						<p>Aliquam non</p>
+					<h4><?php echo lang('t_alibek');?></h4>
+					<p><?php echo lang('t_text_alibek');?></p>
 						<div class="w3l-social">
-							<ul>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-rss"></i></a></li>
-							</ul>
+							
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 agileinfo-team-grid">
-					<img src="images/t3.jpg" alt="" />
+					<img src="/assets/images/t3.jpg" alt="" />
 					<div class="captn">
-						<h4>Johan Botha</h4>
-						<p>Nulla molestie</p>
+					<h4><?php echo lang('t_allaniyaz');?></h4>
+					<p><?php echo lang('t_text_allaniyaz');?></p>
 						<div class="w3l-social">
-							<ul>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-rss"></i></a></li>
-							</ul>
+							
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 agileinfo-team-grid">
-					<img src="images/t4.jpg" alt="" />
+					<img src="/assets/images/t4.jpg" alt="" />
 					<div class="captn">
-						<h4>Steven Wilson</h4>
-						<p>Quisque vitae</p>
-						<div class="w3l-social">
-							<ul>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-rss"></i></a></li>
-							</ul>
-						</div>
+					<h4><?php echo lang('t_baxit');?></h4>
+					<p><?php echo lang('t_text_baxit');?></p>
+						
 					</div>
 				</div>
 				<div class="clearfix"> </div>
@@ -211,7 +193,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="footer-grid-info">
 						<p>Eiusmod Tempor inc
-							<span>St Dolore Place,Kingsport 56777.</span>
+							<span>Inha University of Tashkent.</span>
 						</p>
 						<p class="phone">Phone : +1 123 456 789
 							<span>Email : <a href="mailto:example@email.com">mail@example.com</a></span>
@@ -224,10 +206,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="footer-grid-info">
 						<ul>
-							<li><a href="about.html">About</a></li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="gallery.html">Gallery</a></li>
-							<li><a href="contact.html">Contact</a></li>
+						<li><a href="homepage"><?php echo lang('menu_home'); ?></a></li>
+						<li><a href="about"><?php echo lang('menu_about'); ?></a></li>
+						<li><a href="services"><?php echo lang('menu_services'); ?></li>
+						<li><a href="codes"><?php echo lang('menu_codes'); ?></a></li>	
+						<li><a href="gallery"><?php echo lang('menu_gallery'); ?></a></li>
+						<li><a href="contact"><?php echo lang('menu_feedback'); ?></a></li>
 						</ul>
 					</div>
 				</div>
