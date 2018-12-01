@@ -191,13 +191,6 @@ class Bot_lib {
         // $output contains the output string 
         $output = curl_exec($ch);
         
-        if (curl_errno($ch) != 0){
-            $f=fopen('./curlerr.txt','w');
-            fwrite($f,curl_errno($ch));
-            fwrite($f,"\n");
-            fclose($f);
-            return $this->call_curl_tasix($method,$params);
-        }
         //echo curl_errno($ch);
         // close curl resource to free up system resources 
         curl_close($ch);
