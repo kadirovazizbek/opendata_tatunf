@@ -162,6 +162,8 @@ class Bot extends CI_Controller{
 			$response = json_decode($this->data_lib->watson($item->message));
 			//print_r($response);
 			$response_text = "";
+			$city = "";
+			$price = "";
 			if(is_array($response->intents) && $response->intents[0]->intent == "hotel_suggestion"){
 				if(is_array($response->entities) && count($response->entities)>0){
 
