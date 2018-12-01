@@ -191,7 +191,28 @@ class Bot extends CI_Controller{
 							}
 						}
 					}
-					$this->bot_lib->send_message($item->chat_id, $price . " " . $city . " hotels: ");
+
+					if($city == 'Samarkand') {
+						if($price == 'cheap') 
+							$hotels = $this->db->query("select name,level,tel from `hotel_samarkand` where level='B&B' or level='*' limit 10")->result();
+						else
+							$hotels = $this->db->query("select name,level,tel from `hotel_samarkand` where level='**' or level='***' or level='****' order by length(level) desc limit 10")->result();
+					}
+					else {
+						if($price == 'expensive')
+							$hotels = $this->db->query("select name,tel from `hotel_tashkent` order by id asc limit 5")->result();
+						else
+							$hotels = $this->db->query("select name,tel from `hotel_tashkent` order by id desc limit 5")->result();
+					}
+
+					$text = "";
+					foreach ($hotels as $h) {
+						if($city == 'Samarkand') $text .= "\r\n".$h->name." ".$h->level."(".$h->tel.")";
+						else $text .= "\r\n".$h->name." (".$h->tel.")";
+					}
+					
+					$this->bot_lib->send_message($item->chat_id, $price . " " . $city . " hotels: ".$text);
+					//$this->bot_lib->send_message($item->chat_id, $price . " " . $city . " hotels: ");
 				}
 				
 			}
