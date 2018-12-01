@@ -107,8 +107,8 @@ class Bot extends CI_Controller{
 			die();
 		}
 		
-		$response = json_decode($this->data->watson($message));
-		if($response->intents[0]->intent == "hotel_suggestion"){
+		$response = json_decode($this->data_lib->watson($message));
+		if(is_array($response->intents) && $response->intents[0]->intent == "hotel_suggestion"){
             if(is_array($response->entities) && count($response->entities)>0){
                 switch(strtolower($response->entities[0]->value)){
                     case "tashkent":
