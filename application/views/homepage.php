@@ -108,7 +108,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="logo">
 					<h1>
-						<a href="homepage">Smart City</a>
+						<a href="homepage"><?php echo lang('smart_city');?></a>
 					</h1>
 				</div>
 				<div class="top-nav">
@@ -118,14 +118,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li><a href="homepage"><?php echo lang('menu_home'); ?></a></li>
-								<li><a href="about"><?php echo lang('menu_about'); ?></a></li>
-								<li><a href="services"><?php echo lang('menu_services'); ?></li>
-								<li><a href="codes"><?php echo lang('menu_codes'); ?></a></li>	
-								<li><a href="gallery"><?php echo lang('menu_gallery'); ?></a></li>
-								<li><a href="contact"><?php echo lang('menu_feedback'); ?></a></li>
-								<li><?php echo anchor($this->lang->switch_uri('ru'),'<img width="30" src="/assets/images/ru-flag.png">') ;?></li>
-						<li><?php echo anchor($this->lang->switch_uri('uz'),'<img width="30"  src="/assets/images/uz-flag.png">');?></li> 
+							<li class="current"><a href="<?php echo site_url('homepage');?>"><?php echo lang('menu_home');?></a></li>
+							<li class="current"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about');?></a></li>
+							<li class="current"><a href="<?php echo site_url('services');?>"><?php echo lang('menu_services');?></a></li>
+							<li class="current"><a href="<?php echo site_url('codes');?>"><?php echo lang('menu_rooms');?></a></li>
+							<li class="current"><a href="<?php echo site_url('gallery');?>"><?php echo lang('menu_gallery');?></a></li>
+							<li class="current"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
+							<li><?php echo anchor($this->lang->switch_uri('ru'),'<img width="30" src="/assets/images/ru-flag.png">') ;?></li>
+					  	<li><?php echo anchor($this->lang->switch_uri('uz'),'<img width="30"  src="/assets/images/uz-flag.png">');?></li> 
 								<div class="clearfix"> </div>
 							</ul>	
 						</div>	

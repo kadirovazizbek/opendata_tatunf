@@ -14,7 +14,7 @@ $lang['menu_home'] = 'Главная';
 $lang['menu_about'] = 'О нас';
 $lang['menu_help'] = 'О нас';
 $lang['menu_feedback'] = 'Обратная связь';
-$lang['menu_codes'] = 'Bir zat';
+$lang['menu_codes'] = 'Коды';
 $lang['menu_gallery'] = 'Галерея';
 $lang['menu_service'] = 'Сервисы';
 $lang['menu_team'] = 'Наша Команда';
@@ -97,3 +97,4 @@ $lang['pages']= 'Страницы';
 $lang['follow']= 'Подписаться';
 $lang['smart_uslugi']= 'Умные предложения';
 
+$lang['smart_city'] = 'Умный Город';

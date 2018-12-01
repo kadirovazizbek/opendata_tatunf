@@ -2,13 +2,30 @@
 <html>
 <head>
 	<title></title>
-	<link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-	<script src="/assets/js/jquery-1.11.1.min.js"></script>
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="/assets/css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!-- font -->
+<link href='//fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<!-- //font -->
+<script src="/assets/js/jquery-1.11.1.min.js"></script>
 <script src="/assets/js/bootstrap.js"></script>
+<!-- parallax -->
+	<script src="/assets/js/SmoothScroll.min.js"></script>
+	<script src="/assets/js/jarallax.js"></script>
+	<!-- //parallax -->
 </head>
 
 <body>
-		<div class="col-md-4">
+		<div class="col-md-4 fadeInUp animated">
 	<table class="table table-dark table-striped table-hover" border="3" >
 		<thead bgcolor="orange"><tr>
 		<td>City</td>

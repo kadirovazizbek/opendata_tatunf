@@ -85,7 +85,7 @@ $lang['pages']= 'Сахифалар';
 $lang['follow']= 'Обуна болиш';
 
 $lang['smart_uslugi']= 'Смарт таклифлар';
-
+$lang['smart_city'] = 'Смарт Шахар';
 
 
 
