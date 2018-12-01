@@ -194,19 +194,20 @@ class Bot extends CI_Controller{
 
 					if($city == 'Samarkand') {
 						if($price == 'expensive') 
-							$hotels = $this->db->query("select name from `hotel_samarkand` where `level`='B&B' || `level`='*'");
+							$hotels = $this->db->query("select name from `hotel_samarkand` where level='B&B' or level='*'")->result();
 						else
-							$hotels = $this->db->query("select name from `hotel_samarkand` where `level`='**' || `level`='***' || `level`='****'");
+							$hotels = $this->db->query("select name from `hotel_samarkand` where level='**' or level='***' || level='****'")->result();
 					}
 					else {
 						if($price == 'expensive')
-							$hotels = $this->db->query("select name from `hotel_tashkent` order by asc limit 5");
+							$hotels = $this->db->query("select name from `hotel_tashkent` order by id asc limit 5")->result();
 						else
-							$hotels = $this->db->query("select name from `hotel_tashkent` order by desc limit 5");
+							$hotels = $this->db->query("select name from `hotel_tashkent` order by id desc limit 5")->result();
 					}
 
+					$text = "";
 					foreach ($hotels as $h) {
-						$t .= '\n'.$h;
+						$text .= '\n'.$h['name'];
 					}
 					
 					$this->bot_lib->send_message($item->chat_id, $price . " " . $city . " hotels: ".$text);
