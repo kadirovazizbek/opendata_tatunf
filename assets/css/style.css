@@ -231,7 +231,7 @@ ul.nav.navbar-nav {
     min-height: 255px;
 }
 .about-grid-info h4{
-    color: #FFF;
+    color: rgb(7, 136, 18);
     font-size: 2em;
     margin: 0;
     font-family: 'Pacifico', cursive;
@@ -313,7 +313,7 @@ ul.nav.navbar-nav {
     font-size: 4em;
     margin: 0;
     padding: 1.4em 0 0 0;
-    color: #FFF;
+    color: rgb(5, 12, 5);
     text-transform: uppercase;
     letter-spacing: 22px;
 }

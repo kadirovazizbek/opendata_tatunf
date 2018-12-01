@@ -195,7 +195,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="col-md-3 about-grid">
 					<div class="about-grid-info about-grid-info1 effect-1">
-						<h4>Maldives</h4>
+					<a href="#">	<h4>Smart Bot</h4></a>
 					</div>
 				</div>
 				<div class="col-md-3 about-grid">
