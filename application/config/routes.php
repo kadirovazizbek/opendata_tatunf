@@ -52,3 +52,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+$route['^uz/(.+)$'] = "$1";
+$route['^ru/(.+)$'] = "$1";
+
+
+// '/en' and '/fr' -> use default controller
+
+$route['^uz$'] = $route['default_controller'];
+$route['^ru$'] = $route['default_controller'];
