@@ -136,5 +136,74 @@ class Data_lib{
         $result = json_decode($result);
         //var_dump($result);
 		return $result->text[0];
-	}
+    }
+    
+    public function analyzeAndSendResponse($text)
+    {
+        $CI = & get_instance();
+        if(preg_match("/[а-я]/i",$text)){
+            $text = $this->translate($text);
+            $f = fopen('translate.txt','w');
+            fwrite($f, $text);
+            fclose($f);
+        }
+        $response = json_decode($this->watson($text));
+        //print_r($response);
+        $response_text = "";
+        $city = "";
+        $price = "";
+        if(is_array($response->intents) && $response->intents[0]->intent == "hotel_suggestion"){
+            if(is_array($response->entities) && count($response->entities)>0){
+
+                foreach($response->entities as $entity){
+                    //print_r($entity);
+                    if($entity->entity == 'city'){
+                        switch(strtolower($entity->value)){
+                            case "tashkent":
+                                $city = "Tashkent";
+                                break;
+                            case "samarkand":
+                            $city = "Samarkand";
+                                break;
+                        }
+                    }
+
+                    if($entity->entity == 'price'){
+                        switch(strtolower($entity->value)){
+                            case "cheap":
+                                $price = 'cheap';
+                                break;
+                            case "expensive":
+                                $price = 'expensive';
+                                break;
+                        }
+                    }
+                }
+
+                if($city == 'Samarkand') {
+                    if($price == 'cheap') 
+                        $hotels = $CI->db->query("select name,level,tel from `hotel_samarkand` where level='B&B' or level='*' limit 10")->result();
+                    else
+                        $hotels = $CI->db->query("select name,level,tel from `hotel_samarkand` where level='**' or level='***' or level='****' order by length(level) desc limit 10")->result();
+                }
+                else {
+                    if($price == 'expensive')
+                        $hotels = $CI->db->query("select name,tel from `hotel_tashkent` order by id asc limit 5")->result();
+                    else
+                        $hotels = $CI->db->query("select name,tel from `hotel_tashkent` order by id desc limit 5")->result();
+                }
+
+                $response_text = "";
+                foreach ($hotels as $h) {
+                    if($city == 'Samarkand') $text .= "\r\n".$h->name." ".$h->level."(".$h->tel.")";
+                    else $response_text .= "\r\n".$h->name." (".$h->tel.")";
+                }
+                
+                
+                //$CI->bot_lib->send_message($item->chat_id, $price . " " . $city . " hotels: ");
+            }
+            
+        }
+        return $response_text;
+    }
 }

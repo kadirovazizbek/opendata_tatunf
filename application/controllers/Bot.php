@@ -33,6 +33,9 @@ class Bot extends CI_Controller{
             $item->message = $item->callback_query->message;
             $item->message->text = $item->callback_query->data;
 		}
+		if(isset($item->message->location)){
+
+		}
 		
 		
         
@@ -126,6 +129,51 @@ class Bot extends CI_Controller{
 		}
 		echo "Ok";
 	}
+
+	public function chatbot(){
+		
+        if(!isset($GLOBALS['HTTP_RAW_POST_DATA'])){
+            //In PHP7, we should use php://input instead of HTTP_RAW_POST_DATA
+            $HTTP_RAW_POST_DATA = file_get_contents("php://input");
+        } else {
+            $HTTP_RAW_POST_DATA = $GLOBALS['HTTP_RAW_POST_DATA'];
+		}
+		$item = json_decode($HTTP_RAW_POST_DATA);
+
+		if (!isset($item->message->text)){
+            $item->message->text = '';
+        }
+        
+		if ($item === NULL) die("No direct access");
+		
+		$message = trim($item->message->text);
+		$chat_id = $item->message->chat->id;
+		if(isset($item->message->message_id)){
+			$message_id = $item->message->message_id;
+		} else {
+			$message_id = $item->update_id;
+		}
+
+		$insert = array(
+			'message'	=>	htmlspecialchars($message),
+			'username'	=>	"WebSite",
+			'first_name'	=>	"Web",
+			'last_name'	=>	"Site",
+			'message_id'=>	0,
+			'chat_id'	=>	0,
+			'chat_title' => "",
+			'is_audio' => 	0,
+			'audio_src' => 	"",
+			'processed' => 1,
+		);
+
+		$this->db->insert('bot',$insert);
+		
+		$response_text = $this->data_lib->analyzeAndSendResponse($message);
+		
+		echo nl2br($response_text);
+	}
+
 	public function cron()
 	{
 		$this->worker();
@@ -153,70 +201,10 @@ class Bot extends CI_Controller{
 	{
 		$messages = $this->db->where('processed', 0)->where('in',1)->limit(3)->order_by('id','desc')->get('bot')->result();
 		foreach($messages as $item){
-			if(preg_match("/[а-я]/i",$item->message)){
-				$item->message = $this->data_lib->translate($item->message);
-				$f = fopen('translate.txt','w');
-				fwrite($f, $item->message);
-				fclose($f);
-			}
-			$response = json_decode($this->data_lib->watson($item->message));
-			//print_r($response);
-			$response_text = "";
-			$city = "";
-			$price = "";
-			if(is_array($response->intents) && $response->intents[0]->intent == "hotel_suggestion"){
-				if(is_array($response->entities) && count($response->entities)>0){
+			$response_text = $this->data_lib->analyzeAndSendResponse($item->message);
 
-					foreach($response->entities as $entity){
-						print_r($entity);
-						if($entity->entity == 'city'){
-							switch(strtolower($entity->value)){
-								case "tashkent":
-									$city = "Tashkent";
-									break;
-								case "samarkand":
-								$city = "Samarkand";
-									break;
-							}
-						}
-	
-						if($entity->entity == 'price'){
-							switch(strtolower($entity->value)){
-								case "cheap":
-									$price = 'cheap';
-									break;
-								case "expensive":
-									$price = 'expensive';
-									break;
-							}
-						}
-					}
-
-					if($city == 'Samarkand') {
-						if($price == 'cheap') 
-							$hotels = $this->db->query("select name,level,tel from `hotel_samarkand` where level='B&B' or level='*' limit 10")->result();
-						else
-							$hotels = $this->db->query("select name,level,tel from `hotel_samarkand` where level='**' or level='***' or level='****' order by length(level) desc limit 10")->result();
-					}
-					else {
-						if($price == 'expensive')
-							$hotels = $this->db->query("select name,tel from `hotel_tashkent` order by id asc limit 5")->result();
-						else
-							$hotels = $this->db->query("select name,tel from `hotel_tashkent` order by id desc limit 5")->result();
-					}
-
-					$text = "";
-					foreach ($hotels as $h) {
-						if($city == 'Samarkand') $text .= "\r\n".$h->name." ".$h->level."(".$h->tel.")";
-						else $text .= "\r\n".$h->name." (".$h->tel.")";
-					}
-					
-					$this->bot_lib->send_message($item->chat_id, $price . " " . $city . " hotels: ".$text);
-					//$this->bot_lib->send_message($item->chat_id, $price . " " . $city . " hotels: ");
-				}
-				
-			}
-
+			$this->bot_lib->send_message($item->chat_id, $response_text);
+			
 			$update = [
 				'processed' => 1,
 			];
