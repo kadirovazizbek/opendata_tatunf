@@ -170,6 +170,43 @@ $(document).ready(function(e) {
 		
 		
 </form>
+<table class="table table-bordered" style="background:white">
+<?php if(isset($museums)):?>
+<?php foreach($museums as $item):?>
+<tr>
+<td><?php echo $item->title;?></td>
+<td><?php echo $item->address;?></td>
+</tr>
+<?php endforeach;?>
+<?php endif;?>
+
+<?php if(isset($hotels_tashkent)):?>
+<?php foreach($hotels_tashkent as $item):?>
+<tr>
+<td><?php echo $item->name;?></td>
+<td><?php echo $item->addres;?></td>
+</tr>
+<?php endforeach;?>
+<?php endif;?>
+
+<?php if(isset($hotels_samarkand)):?>
+<?php foreach($hotels_samarkand as $item):?>
+<tr>
+<td><?php echo $item->name;?></td>
+<td><?php echo $item->address;?></td>
+</tr>
+<?php endforeach;?>
+<?php endif;?>
+
+<?php if(isset($universities)):?>
+<?php foreach($universities as $item):?>
+<tr>
+<td><?php echo $item->otm_nomi;?></td>
+<td></td>
+</tr>
+<?php endforeach;?>
+<?php endif;?>
+</table>
 </div>
 </div>
 </div>
