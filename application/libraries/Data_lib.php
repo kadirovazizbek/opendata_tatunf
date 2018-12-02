@@ -154,7 +154,8 @@ class Data_lib{
         $price = "";
         if(is_array($response->intents) && $response->intents[0]->intent == "hotel_suggestion"){
             if(is_array($response->entities) && count($response->entities)>0){
-
+                $city = "Tashkent";
+                $price = "expensive";
                 foreach($response->entities as $entity){
                     //print_r($entity);
                     if($entity->entity == 'city'){
