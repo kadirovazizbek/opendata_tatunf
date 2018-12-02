@@ -117,11 +117,8 @@ class Bot extends CI_Controller{
 			switch ($command){
 				case '/start':
                     $this->bot_lib->save_last_command($item,'/start');
-					$this->bot_lib->send_message($chat_id,'Kursni tanlang: ',$this->keyboard_year);
+					$this->bot_lib->send_message($chat_id,'Здравствуйте! Задайте мне вопрос, либо отправьте аудио сообщение',$this->keyboard_year);
 					break;
-                case '/stop':
-                    $this->bot_lib->send_message($chat_id,'Bot toqtatildi. Aktivlestiriw ushin, /start basin');
-                    break;
 			}
 			
 		}
