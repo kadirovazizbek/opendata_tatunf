@@ -1,6 +1,10 @@
 <div class="chat">
 <div class="chat_title"><?php echo lang('smart_chat');?></div>
 <div id="chat_window">
+<div class="message message-bot">
+Hello, I'm Smart City Assistant. Ask me something!<br>
+Здравствуйте, я Ассистент Smart City. Спросите у меня что-нибудь
+</div>
 </div>
 <table width="100%">
 <tr><td>

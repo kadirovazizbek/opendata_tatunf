@@ -152,7 +152,7 @@ class Data_lib{
         $response_text = "";
         $city = "Tashkent";
         $price = "expensive";
-        if(is_array($response->intents) && $response->intents[0]->intent == "hotel_suggestion"){
+        if(is_array($response->intents) && isset($response->intents[0]) && $response->intents[0]->intent == "hotel_suggestion"){
             if(is_array($response->entities) && count($response->entities)>0){
 
                 foreach($response->entities as $entity){
@@ -204,12 +204,10 @@ class Data_lib{
             }
             
         }
-
-
-        $x = 41.338479;
+        elseif(is_array($response->intents) && isset($response->intents[0]) && $response->intents[0]->intent == "museum_suggestion"){
+            $x = 41.338479;
         $y = 69.334615;
         
-        if(is_array($response->intents) && $response->intents[0]->intent == "museum_suggestion"){
             $response_text = "";
             $museums = $CI->db->get('museums_tashkent')->result_array();
             $distances = array();
@@ -227,11 +225,9 @@ class Data_lib{
 
             
             //$CI->bot_lib->send_message($item->chat_id, $price . " " . $city . " hotels: ");
+        } else {
+            $response_text = "I'm sorry, I didn't understand your query";
         }
-            
-        
-
-
 
         return $response_text;
     }
