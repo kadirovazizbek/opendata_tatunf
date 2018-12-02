@@ -183,21 +183,21 @@ class Data_lib{
 
                 if($city == 'Samarkand') {
                     if($price == 'cheap') 
-                        $hotels = $CI->db->query("select name,level,tel from `hotel_samarkand` where level='B&B' or level='*' limit 10")->result();
+                        $hotels = $CI->db->query("select name,level,tel,addres from `hotel_samarkand` where level='B&B' or level='*' limit 10")->result();
                     else
-                        $hotels = $CI->db->query("select name,level,tel from `hotel_samarkand` where level='**' or level='***' or level='****' order by length(level) desc limit 10")->result();
+                        $hotels = $CI->db->query("select name,level,tel,addres from `hotel_samarkand` where level='**' or level='***' or level='****' order by length(level) desc limit 10")->result();
                 }
                 else {
                     if($price == 'expensive')
-                        $hotels = $CI->db->query("select name,tel from `hotel_tashkent` order by id asc limit 5")->result();
+                        $hotels = $CI->db->query("select name,tel,addres from `hotel_tashkent` order by id asc limit 5")->result();
                     else
-                        $hotels = $CI->db->query("select name,tel from `hotel_tashkent` order by id desc limit 5")->result();
+                        $hotels = $CI->db->query("select name,tel,addres from `hotel_tashkent` order by id desc limit 5")->result();
                 }
-
+                $i = 1;
                 $response_text = "I found this for you:";
                 foreach ($hotels as $h) {
-                    if($city == 'Samarkand') $response_text .= "\r\n".$h->name." ".$h->level."(".$h->tel.")";
-                    else $response_text .= "\r\n".$h->name." (".$h->tel.")";
+                    if($city == 'Samarkand') $response_text .= "\r\n".$i++.") ".$h->name." ".$h->level."(".$h->tel.") ".$h->addres;
+                    else $response_text .= "\r\n".$i++.") ".$h->name." (".$h->tel.") ".$h->addres;
                 }
                 
                 
@@ -220,8 +220,9 @@ class Data_lib{
             asort($distances);
             //return json_encode($distances);
             $distances = array_slice($distances,0,5,true);
+            $j = 1;
             foreach($distances as $key=>$item){
-                $response_text .= $key . "\r\n";
+                $response_text .= $j++.") ".$key . "\r\n";
             }
 
             
