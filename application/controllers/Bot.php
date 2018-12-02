@@ -112,12 +112,9 @@ class Bot extends CI_Controller{
 		
 		
 		if (strlen($message) > 0 && $message[0] == '/'){
-            $command = $this->bot_lib->detect_command($message);
-			$this->bot_lib->save_last_command($item,$command);
-			switch ($command){
+			switch ($message){
 				case '/start':
-                    $this->bot_lib->save_last_command($item,'/start');
-					$this->bot_lib->send_message($chat_id,'Здравствуйте! Задайте мне вопрос, либо отправьте аудио сообщение',$this->keyboard_year);
+					$this->bot_lib->send_message($chat_id,'Здравствуйте! Задайте мне вопрос, либо отправьте аудио сообщение');
 					break;
 			}
 			
@@ -207,9 +204,9 @@ class Bot extends CI_Controller{
 			$update = [
 				'processed' => 1,
 			];
-			var_dump($item);
+			
 			$this->db->where('id', $item->id)->update('bot', $update);
-			echo $this->db->last_query();
+			//echo $this->db->last_query();
 		}
 		//print_r($messages);
 	}
