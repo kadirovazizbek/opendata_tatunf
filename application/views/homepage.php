@@ -163,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="item">
 					<div class="slider slider2">
 						<div class="carousel-caption kb_caption kb_caption_center slider-grid">
-						   <h3>Smart City</h3>
+						   <h3><?php echo lang('smart_city');?></h3>
 							<p>Smart City and smart technologies</p>
 						</div>
 					</div>
@@ -192,22 +192,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="about-grids">
 				<div class="col-md-3 about-grid">
 					<div class="about-grid-info effect-1">
-						<h4>San Francisco</h4>
+					<a href="<?php echo site_url('#');?>"><h4><?php echo lang('smart_idea');?></h4></a>
 					</div>
 				</div>
 				<div class="col-md-3 about-grid">
 					<div class="about-grid-info about-grid-info1 effect-1">
-					<a href="#">	<h4>Smart Bot</h4></a>
+					<a href="<?php echo site_url('#');?>"><h4><?php echo lang('smart_bot');?></h4></a>
 					</div>
 				</div>
 				<div class="col-md-3 about-grid">
 					<div class="about-grid-info about-grid-info2 effect-1">
-						<h4>Ireland</h4>
+					<a href="<?php echo site_url('#');?>"><h4><?php echo lang('smart_chat');?></h4></a>
 					</div>
 				</div>
 				<div class="col-md-3 about-grid">
 					<div class="about-grid-info about-grid-info3 effect-1">
-					<a href="temperature">	<h4>Temperature</h4> </a>
+					<a href="<?php echo site_url('temperature');?>"><h4><?php echo lang('temperature');?></h4></a>
+					
 					</div>
 				</div>
 				<div class="clearfix"> </div>

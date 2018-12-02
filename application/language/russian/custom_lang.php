@@ -98,3 +98,7 @@ $lang['follow']= 'Подписаться';
 $lang['smart_uslugi']= 'Умные предложения';
 
 $lang['smart_city'] = 'Умный Город';
+$lang['smart_idea'] = 'Умная Идея';
+$lang['smart_chat'] = 'Умный Чат';
+$lang['smart_bot'] = 'Умный Бот';
+$lang['temperature'] = 'Температура';

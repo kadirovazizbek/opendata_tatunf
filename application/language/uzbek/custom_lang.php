@@ -86,6 +86,12 @@ $lang['follow']= 'Обуна болиш';
 
 $lang['smart_uslugi']= 'Смарт таклифлар';
 $lang['smart_city'] = 'Смарт Шахар';
+$lang['smart_chat'] = 'Смарт Чат';
+$lang['smart_bot'] = 'Смарт Бот';
+$lang['temperature'] = 'Об-хаво';
+$lang['smart_idea'] = 'Смарт Идея';
+
+
 
 
 
