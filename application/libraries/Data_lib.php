@@ -208,9 +208,9 @@ class Data_lib{
 
         $x = 41.338479;
         $y = 69.334615;
-        $response_text = "";
+        
         if(is_array($response->intents) && $response->intents[0]->intent == "museum_suggestion"){
-
+            $response_text = "";
             $museums = $CI->db->get('museums_tashkent')->result_array();
             $distances = array();
             foreach($museums as $item){
