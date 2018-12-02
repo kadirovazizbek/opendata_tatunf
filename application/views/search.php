@@ -85,7 +85,7 @@ $(document).ready(function(e) {
 
 <form action="" method="post" id="search-block-form">
       <div class="form-item">
-        <input type="text" name="" value="" size="15" maxlength="128" placeholder="<?php echo lang('search_find');?>">
+        <input type="text" name="q" value="" size="15" maxlength="128" placeholder="<?php echo lang('search_find');?>">
       </div>
       <div class="form-actions">
         <input type="submit" id="edit-submit" name="op" value="Поиск" class="form-submit">
