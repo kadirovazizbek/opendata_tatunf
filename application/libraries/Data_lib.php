@@ -206,15 +206,15 @@ class Data_lib{
         }
 
 
-        $x = 41.3384986;
-        $y = 69.333828;
+        $x = 41.338479;
+        $y = 69.334615;
         $response_text = "";
         if(is_array($response->intents) && $response->intents[0]->intent == "museum_suggestion"){
 
             $museums = $CI->db->get('museums_tashkent')->result_array();
             $distances = array();
             foreach($museums as $item){
-                $distance = sqrt(pow($x-$item['lat'],2)+pow($y-$item['lon'],2));
+                $distance = sqrt(pow($x-$item['lon'],2)+pow($y-$item['lat'],2));
                 $distances[$item['title']] = $distance;
             }
             asort($distances);
