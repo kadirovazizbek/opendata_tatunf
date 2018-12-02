@@ -2,9 +2,10 @@
 <div class="chat_title"><?php echo lang('smart_chat');?></div>
 <div id="chat_window">
 </div>
-<div class="form-inline">
-<input type="text" id="message_field" class="form-control" placeholder="Введите ваш запрос"><button type="button" id="send" class="btn btn-primary">Send</button>
-</div>
+<table width="100%">
+<tr><td>
+<input type="text" id="message_field" class="form-control" placeholder="Введите ваш запрос"></td><td><button type="button" id="send" class="btn btn-primary">Send</button></td></tr>
+</table>
 </div>
 <script>
 $(document).ready(function(){
@@ -88,10 +89,10 @@ $(document).ready(function(){
     background:#cfc;
 }
 #message_field{
-    min-width:200px;
-    max-width:79%!important;
+    width:100%;
+    max-width:100%!important;
 }
 #send{
-    max-width:18%!important;
+    width:100%!important;
 }
 </style>
