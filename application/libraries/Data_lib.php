@@ -208,25 +208,23 @@ class Data_lib{
 
         $x = 41.3384986;
         $y = 69.333828;
+        $response_text = "";
         if(is_array($response->intents) && $response->intents[0]->intent == "museum_suggestion"){
 
-            $dolgota = $CI->db->query("select lon from `museums_tashkent`;")->result_array();
-            $shirota = $CI->db->query("select lat from `museums_tashkent`;")->result_array();
+            $museums = $CI->db->get('museums_tashkent')->result_array();
+            $distances = array();
+            foreach($museums as $item){
+                $distance = sqrt(pow($x-$item['lat'],2)+pow($y-$item['lon'],2));
+                $distances[$item['title']] = $distance;
+            }
+            asort($distances);
+            //return json_encode($distances);
+            $distances = array_slice($distances,0,5,true);
+            foreach($distances as $key=>$item){
+                $response_text .= $key . "\r\n";
+            }
+
             
-            $distance = array();
-            for($i = 1; $i <= count($dolgota); $i++) {
-                $distance[$i] = sqrt(($x-$dolgota[$i])*($x-$dolgota[$i])) + sqrt(($y-$shirota[$i])*($y-$shirota[$i]));
-            }
-
-            asort($distance);
-
-            $museums="";
-            foreach ($distance as $key) {
-                $museums .= $CI->db->query("select title from `museums_tashkent` where id = $key")." ".$CI->db->query("select addres from `museums_tashkent` where id = $key")." ".$CI->db->query("select phone_number from `museums_tashkent` where id = $key");
-            }
-
-            $response_text ="";
-            $response_text .= $museums;
             //$CI->bot_lib->send_message($item->chat_id, $price . " " . $city . " hotels: ");
         }
             
