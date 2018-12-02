@@ -156,7 +156,7 @@ $(document).ready(function(e) {
 
 <form action="" method="post" id="search-block-form">
       <div class="form-item">
-        <input type="text" name="" value="" size="15" maxlength="128" placeholder="<?php echo lang('search_find');?>">
+        <input type="text" name="q" value="" size="15" maxlength="128" placeholder="<?php echo lang('search_find');?>">
       </div>
       <div class="form-actions">
         <input type="submit" id="edit-submit" name="op" value="Поиск" class="form-submit">
@@ -170,6 +170,43 @@ $(document).ready(function(e) {
 		
 		
 </form>
+<table class="table table-bordered" style="background:white">
+<?php if(isset($museums)):?>
+<?php foreach($museums as $item):?>
+<tr>
+<td><?php echo $item->title;?></td>
+<td><?php echo $item->address;?></td>
+</tr>
+<?php endforeach;?>
+<?php endif;?>
+
+<?php if(isset($hotels_tashkent)):?>
+<?php foreach($hotels_tashkent as $item):?>
+<tr>
+<td><?php echo $item->name;?></td>
+<td><?php echo $item->addres;?></td>
+</tr>
+<?php endforeach;?>
+<?php endif;?>
+
+<?php if(isset($hotels_samarkand)):?>
+<?php foreach($hotels_samarkand as $item):?>
+<tr>
+<td><?php echo $item->name;?></td>
+<td><?php echo $item->address;?></td>
+</tr>
+<?php endforeach;?>
+<?php endif;?>
+
+<?php if(isset($universities)):?>
+<?php foreach($universities as $item):?>
+<tr>
+<td><?php echo $item->otm_nomi;?></td>
+<td></td>
+</tr>
+<?php endforeach;?>
+<?php endif;?>
+</table>
 </div>
 </div>
 </div>
