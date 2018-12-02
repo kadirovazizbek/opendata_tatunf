@@ -129,4 +129,6 @@ $lang['button_send'] = 'Отправить';
 $lang['smart_assistent'] = 'Умный Ассистент';
 $lang['search_sistem'] = 'Умный Поиск';
 $lang['search_find'] = 'Найти...';
+$lang['inha'] = 'Университет Инха Ташкент';
+
 
