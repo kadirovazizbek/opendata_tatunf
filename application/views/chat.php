@@ -2,7 +2,9 @@
 <div class="chat_title"><?php echo lang('smart_chat');?></div>
 <div id="chat_window">
 </div>
-<input type="text" id="message_field"><button type="button" id="send"><?php echo lang('button_send'); ?></button>
+<div class="form-inline">
+<input type="text" id="message_field" class="form-control" placeholder="Введите ваш запрос"><button type="button" id="send" class="btn btn-primary">Send</button>
+</div>
 </div>
 <script>
 $(document).ready(function(){
@@ -33,6 +35,10 @@ $(document).ready(function(){
     });
     $(".chat_title_link").click(function(){
         $("#chat_window").toggle('fast');
+        return false;
+    });
+    $("#message_field").focus(function(){
+        $("#chat_window").slideDown('fast');
         return false;
     });
 });
@@ -82,6 +88,10 @@ $(document).ready(function(){
     background:#cfc;
 }
 #message_field{
-    min-width:400px;
+    min-width:200px;
+    max-width:79%!important;
+}
+#send{
+    max-width:18%!important;
 }
 </style>
