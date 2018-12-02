@@ -30,6 +30,9 @@ $(document).ready(function(){
     $(".chat_title").click(function(){
         $("#chat_window").toggle('fast');
     });
+    $(".chat_title_link").click(function(){
+        $("#chat_window").toggle('fast');
+    });
 });
 </script>
 <style>
