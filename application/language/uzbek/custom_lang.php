@@ -92,7 +92,7 @@ $lang['temperature'] = 'Об-хаво';
 $lang['smart_idea'] = 'Смарт Идея';
 
 //temperatura
-$lang['city'] = 'Город';
+$lang['city'] = 'Шахар';
 $lang['tashkent'] = 'Тошкент';
 $lang['gradus'] = 'Градус  °C';
 $lang['nukus'] = 'Нукус';
