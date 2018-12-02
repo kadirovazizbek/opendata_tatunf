@@ -133,8 +133,6 @@ $(document).ready(function(e) {
 							<li class="current"><a href="<?php echo site_url('homepage');?>"><?php echo lang('menu_home');?></a></li>
 							<li class="current"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about');?></a></li>
 							<li class="current"><a href="<?php echo site_url('services');?>"><?php echo lang('menu_services');?></a></li>
-							<li class="current"><a href="<?php echo site_url('codes');?>"><?php echo lang('menu_rooms');?></a></li>
-							<li class="current"><a href="<?php echo site_url('gallery');?>"><?php echo lang('menu_gallery');?></a></li>
 							<li class="current"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
 							<li><?php echo anchor($this->lang->switch_uri('ru'),'<img width="30" src="/assets/images/ru-flag.png">') ;?></li>
 					  	<li><?php echo anchor($this->lang->switch_uri('uz'),'<img width="30"  src="/assets/images/uz-flag.png">');?></li> 
@@ -259,7 +257,7 @@ $(document).ready(function(e) {
 				<div class="clearfix"> </div>
 			</div>
 			<div class="copyright">
-				<p>© 2018 Open Data . All Rights Reserved | Design by <a href="#"> TATU NF TEAM</a> </p>
+				<p><?php echo lang('copyright');?></a> </p>
 			</div>
 		</div>
 	</div>

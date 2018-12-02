@@ -58,7 +58,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="logo">
 					<h1>
-					<a href="homepage">Smart City</a>
+					<a href="homepage"><?php echo lang('smart_city');?></a>
 					</h1>
 				</div>
 				<div class="top-nav">
@@ -68,12 +68,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-							<li><a href="homepage"><?php echo lang('menu_home'); ?></a></li>
-							<li><a href="about"><?php echo lang('menu_about'); ?></a></li>
-							<li><a href="services"><?php echo lang('menu_services'); ?></li>
-							<li><a href="codes"><?php echo lang('menu_codes'); ?></a></li>	
-							<li><a href="gallery"><?php echo lang('menu_gallery'); ?></a></li>
-							<li><a href="contact"><?php echo lang('menu_feedback'); ?></a></li>
+							<li class="current"><a href="<?php echo site_url('homepage');?>"><?php echo lang('menu_home');?></a></li>
+							<li class="current"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about');?></a></li>
+							<li class="current"><a href="<?php echo site_url('services');?>"><?php echo lang('menu_services');?></a></li>
+							<li class="current"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
+							<li><?php echo anchor($this->lang->switch_uri('ru'),'<img width="30" src="/assets/images/ru-flag.png">') ;?></li>
+					  	<li><?php echo anchor($this->lang->switch_uri('uz'),'<img width="30"  src="/assets/images/uz-flag.png">');?></li>
 								<div class="clearfix"> </div>
 							</ul>	
 						</div>	
@@ -89,19 +89,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="w3l-contact-heading">
 				<h2><?php echo lang('menu_feedback'); ?></h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta efficitur ante quis volutpat.</p>
-			</div>
+				</div>
 			<div class="agile-contact-form">
 				<div class="col-md-6 contact-form-left">
 					<div class="contact-form-top">
 						<h3><?php echo lang('contact_us_title');?></h3>
-						<p>Pellentesque eget mi nec est tincidunt accumsan. Proin fermentum dignissim justo, vel euismod justo sodales vel. In non condimentum mauris. Maecenas condimentum interdum lacus, ac varius nisl dignissim ac. Vestibulum euismod est risus, quis convallis nisi tincidunt eget. Sed ultricies congue lacus at fringilla.</p>
-					</div>
+						</div>
 					<div class="contact-address">
 						<ul>
 							<li><i class="fa fa-phone" aria-hidden="true"></i> <span>+1 234 567 8901</span></li>
 							<li><i class="fa fa-phone fa-envelope" aria-hidden="true"></i> <span><a href="mailto:example@email.com">mail@example.com</a></span></li>
-							<li><i class="fa fa-map-marker" aria-hidden="true"></i></i> <span>Inha University of Tashkent.</span></li>
+							<li><i class="fa fa-map-marker" aria-hidden="true"></i></i> <span><?php echo lang('inha');?></span></li>
 						</ul>
 					</div>
 				</div>
@@ -151,22 +149,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="footer">
 		<div class="container">
 			<div class="footer-grids">
-				<div class="col-md-3 footer-grid">
+				<div class="col-md-4 footer-grid">
 					<div class="footer-grid-heading">
-						<h4>Address</h4>
+					<h4><?php echo lang('address');?></h4>
 					</div>
 					<div class="footer-grid-info">
-						<p>Eiusmod Tempor inc
-							<span>Inha University of Tashkent.</span>
+						<p>
+							<span><?php echo lang('inha');?></span>
 						</p>
 						<p class="phone">Phone : +1 123 456 789
 							<span>Email : <a href="mailto:example@email.com">mail@example.com</a></span>
 						</p>
 					</div>
 				</div>
-				<div class="col-md-3 footer-grid">
+				<div class="col-md-4 footer-grid">
 					<div class="footer-grid-heading">
-						<h4>Navigation</h4>
+					<h4><?php echo lang('pages');?></h4>
 					</div>
 					<div class="footer-grid-info">
 						<ul>
@@ -179,30 +177,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-3 footer-grid">
+				<div class="col-md-4 footer-grid">
 					<div class="footer-grid-heading">
-						<h4>Follow</h4>
+					<h4><?php echo lang('follow');?></h4>
 					</div>
 					<div class="social">
 						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-rss"></i></a></li>
-							<li><a href="#"><i class="fa fa-vk"></i></a></li>
+						<li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
+						
+						<li><a href="http://vk.com"><i class="fa fa-vk"></i></a></li>
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-3 footer-grid">
-					<div class="footer-grid-heading">
-						<h4>Newsletter</h4>
-					</div>
-					<div class="footer-grid-info">
-						<form action="#" method="post">
-							<input type="email" id="mc4wp_email" name="EMAIL" placeholder="Enter your email here" required="">
-							<input type="submit" value="Subscribe">
-						</form>
-					</div>
-				</div>
+				
 				<div class="clearfix"> </div>
 			</div>
 			<div class="copyright">

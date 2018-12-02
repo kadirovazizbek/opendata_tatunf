@@ -122,8 +122,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li class="current"><a href="<?php echo site_url('homepage');?>"><?php echo lang('menu_home');?></a></li>
 							<li class="current"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about');?></a></li>
 							<li class="current"><a href="<?php echo site_url('services');?>"><?php echo lang('menu_services');?></a></li>
-							<li class="current"><a href="<?php echo site_url('codes');?>"><?php echo lang('menu_rooms');?></a></li>
-							<li class="current"><a href="<?php echo site_url('gallery');?>"><?php echo lang('menu_gallery');?></a></li>
 							<li class="current"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
 							<li><?php echo anchor($this->lang->switch_uri('ru'),'<img width="30" src="/assets/images/ru-flag.png">') ;?></li>
 					  	<li><?php echo anchor($this->lang->switch_uri('uz'),'<img width="30"  src="/assets/images/uz-flag.png">');?></li> 
@@ -230,84 +228,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!-- //offer -->
-	<!-- news -->
-	<div class="news">
-		<div class="container">
-			<div class="news-heading">
-				<h3><?php echo lang('new_events');?></h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta efficitur ante quis volutpat.</p>
-			</div>
-			<div class="news-grids">
-				<div class="col-md-4 news-grid">
-					<div class="agile-news-grid-info">
-						<div class="news-grid-info-img">
-							<a href="single"><img src="/assets/images/n1.jpg" alt="" /></a>
-						</div>
-						<div class="news-grid-info-bottom">
-							<div class="date-grid">
-								<div class="admin">
-									<a href="#"><i class="fa fa-user" aria-hidden="true"></i> Admin</a>
-								</div>
-								<div class="time">
-									<p><i class="fa fa-calendar" aria-hidden="true"></i> May 09,2016</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-							<div class="news-grid-info-bottom-text">
-								<a href="single">Quisque gravida, nunc eu interdum porta</a>
-								<p>Aliquam erat volutpat. Duis vulputate tempus laoreet. Integer viverra eleifend neque, eget dictum lectus. Quisque eu tempor dolor.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 news-grid">
-					<div class="agile-news-grid-info">
-						<div class="news-grid-info-img">
-							<a href="single"><img src="/assets/images/n2.jpg" alt="" /></a>
-						</div>
-						<div class="news-grid-info-bottom">
-							<div class="date-grid">
-								<div class="admin">
-									<a href="#"><i class="fa fa-user" aria-hidden="true"></i> Admin</a>
-								</div>
-								<div class="time">
-									<p><i class="fa fa-calendar" aria-hidden="true"></i> May 09,2016</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-							<div class="news-grid-info-bottom-text">
-								<a href="single">Quisque gravida, nunc eu interdum porta</a>
-								<p>Aliquam erat volutpat. Duis vulputate tempus laoreet. Integer viverra eleifend neque, eget dictum lectus. Quisque eu tempor dolor.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 news-grid">
-					<div class="agile-news-grid-info">
-						<div class="news-grid-info-img">
-							<a href="single"><img src="/assets/images/n3.jpg" alt="" /></a>
-						</div>
-						<div class="news-grid-info-bottom">
-							<div class="date-grid">
-								<div class="admin">
-									<a href="#"><i class="fa fa-user" aria-hidden="true"></i> Admin</a>
-								</div>
-								<div class="time">
-									<p><i class="fa fa-calendar" aria-hidden="true"></i> May 09,2016</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-							<div class="news-grid-info-bottom-text">
-								<a href="single">Quisque gravida, nunc eu interdum porta</a>
-								<p>Aliquam erat volutpat. Duis vulputate tempus laoreet. Integer viverra eleifend neque, eget dictum lectus. Quisque eu tempor dolor.</p>
-							
-							</div>
-							</br>	</br>
-						</div>
-						
-					</div>
-					
-				</div>
+	
 				<div class="news">
 				
 		<div class="container">
@@ -354,7 +275,7 @@ $preview_name = str_replace(".jpg","_thumbnail.jpg",$pano->path);
 					</div>
 					<div class="footer-grid-info">
 						<p>
-							<span>Inha University of Tashkent.</span>
+							<span><?php echo lang('inha');?></span>
 						</p>
 						<p class="phone">Phone : +1 123 456 789
 							<span>Email : <a href="mailto:example@email.com">mail@example.com</a></span>
@@ -370,9 +291,7 @@ $preview_name = str_replace(".jpg","_thumbnail.jpg",$pano->path);
 						<li class="current"><a href="<?php echo site_url('homepage');?>"><?php echo lang('menu_home');?></a></li>
 							<li class="current"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about');?></a></li>
 							<li class="current"><a href="<?php echo site_url('services');?>"><?php echo lang('menu_services');?></a></li>
-							<li class="current"><a href="<?php echo site_url('codes');?>"><?php echo lang('menu_rooms');?></a></li>
-							<li class="current"><a href="<?php echo site_url('gallery');?>"><?php echo lang('menu_gallery');?></a></li>
-							<li class="current"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
+						<li class="current"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
 						</ul>
 					</div>
 				</div>

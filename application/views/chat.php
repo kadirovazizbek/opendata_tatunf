@@ -3,7 +3,7 @@
 <div id="chat_window">
 <div class="message message-bot">
 Hello, I'm Smart City Assistant. Ask me something!<br>
-Здравствуйте, я Ассистент Smart City. Спросите у меня что-нибудь
+Здравствуйте, я Ассистент Smart City. Спросите у меня что-нибудь. Салом, мен Смарт Шахар Ёрдамчисиман. Саволингизни киритинг.
 </div>
 </div>
 <table width="100%">
