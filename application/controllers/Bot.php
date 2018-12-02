@@ -199,7 +199,7 @@ class Bot extends CI_Controller{
 		foreach($messages as $item){
 			$response_text = $this->data_lib->analyzeAndSendResponse($item->message);
 
-			$this->bot_lib->send_message($item->chat_id, $response_text);
+			if($response_text !== false) $this->bot_lib->send_message($item->chat_id, $response_text);
 			
 			$update = [
 				'processed' => 1,

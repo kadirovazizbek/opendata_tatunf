@@ -140,6 +140,7 @@ class Data_lib{
     
     public function analyzeAndSendResponse($text)
     {
+        if($text == "/start") return "";
         $CI = & get_instance();
         if(preg_match("/[а-я]/i",$text)){
             $text = $this->translate($text);
