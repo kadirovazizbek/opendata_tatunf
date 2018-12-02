@@ -89,9 +89,9 @@ $(document).ready(function(){
 }
 #message_field{
     min-width:400px;
-    width:80%;
+    max-width:79%;
 }
 #send{
-    width:19%;
+    width:18%;
 }
 </style>
