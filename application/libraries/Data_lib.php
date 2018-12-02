@@ -215,7 +215,7 @@ class Data_lib{
             $distances = array();
             foreach($museums as $item){
                 $distance = sqrt(pow($x-$item['lat'],2)+pow($y-$item['lon'],2));
-                $distances[$item['title']] = $distance;
+                $distances[$item['title'] . " " . $item['address'] . " " . $item['phone_number']] = $distance;
             }
             asort($distances);
             //return json_encode($distances);
