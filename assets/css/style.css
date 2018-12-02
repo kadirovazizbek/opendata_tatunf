@@ -235,7 +235,7 @@ ul.nav.navbar-nav {
     font-size: 2em;
     margin: 0;
     font-family: 'Monotype', cursive;
-	line-height: 7.5em;
+	line-height: 3em;
 	text-align: center;
 	
 }
@@ -2075,7 +2075,7 @@ button.btn1:hover{
 		font-size: 26px!important;
 	}
 	.about-grid-info h4 {
-		font-size: 1.5em;
+		font-size: 2em;
 		line-height: 3em;
 	}
 	.about-grid-info {

@@ -102,7 +102,7 @@ $lang['smart_idea'] = 'Умная Идея';
 $lang['smart_chat'] = 'Умный Чат';
 $lang['smart_bot'] = 'Умный Бот';
 $lang['temperature'] = 'Температура';
-$lang['smart_search'] = 'Смарт Поиск';
+$lang['smart_search'] = 'Умный Поиск';
 
 
 //temperatura
