@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 //
 $lang['menu_home'] = 'Бош саҳифа';
-$lang['menu_about'] = 'Биз ҳаққимизда';
+$lang['menu_about'] = 'Биз хаккимизда';
 $lang['menu_services'] = 'Сервислар';
 $lang['menu_help'] = 'Ёрдам';
 $lang['menu_codes'] = 'Кодлар';
@@ -117,6 +117,12 @@ $lang['search_sistem'] = 'Смарт Кидирув';
 $lang['search_find'] = 'Кидирув...';
 $lang['inha'] = 'Тошкент Инха Университети';
 
+
+//about
+$lang['about_us'] = 'Бу проектдан фойдаланиш жуда осон!';
+$lang['about_text'] = 'Озингизга керак болган малумотлари билиб олиш учун мобил илова ёки Телеграм мессенджери болса кифоя. Енди сиз факат сорайсиз - Ассистент сизга ёрдам беради.';
+$lang['about_title'] = 'Озингизга керак болган малумотлари сораб билиб олинг';
+$lang['our_team'] = 'Бизнинг Жамоа';
 
 
 
