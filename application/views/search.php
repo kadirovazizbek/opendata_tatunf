@@ -79,7 +79,10 @@ $(document).ready(function(e) {
 <body>
 
 <!-- Сам код формы (вставляется непосредственно в страницу) -->
-<div class="col-md-12"></br></br></br></br></br></br></br></br></br></br>
+<div class="container">
+<div class="col-md-12"></br></br></br></br></br></br></br></br></br></br><h1>
+<?php echo lang('search_sistem');?></h1>
+
 <form action="" method="post" id="search-block-form">
       <div class="form-item">
         <input type="text" name="" value="" size="15" maxlength="128" placeholder="Найти...">
@@ -90,9 +93,10 @@ $(document).ready(function(e) {
       </div>
 	  </br>
 	  
-		<h1>Поисковая Система</h1>
-		<h1>Smart Assistent</h1>
+		
+		<h1><?php echo lang('smart_assistent');?></h1>
 </form>
+</div>
 </div>
 <!-- Конец -->
 </body>

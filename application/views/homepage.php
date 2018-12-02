@@ -193,7 +193,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="about-grids">
 				<div class="col-md-3 about-grid">
 					<div class="about-grid-info effect-1">
-					<a href="<?php echo site_url('#');?>" target="_blank"><h4><?php echo lang('smart_idea');?></h4></a>
+					<a href="<?php echo site_url('search');?>" target="_blank"><h4><?php echo lang('smart_search');?></h4></a>
 					</div>
 				</div>
 				<div class="col-md-3 about-grid">

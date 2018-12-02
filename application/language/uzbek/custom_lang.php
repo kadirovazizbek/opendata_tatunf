@@ -90,6 +90,7 @@ $lang['smart_chat'] = 'Смарт Чат';
 $lang['smart_bot'] = 'Смарт Бот';
 $lang['temperature'] = 'Об-хаво';
 $lang['smart_idea'] = 'Смарт Идея';
+$lang['smart_search'] = 'Смарт Кидирув';
 
 //temperatura
 $lang['city'] = 'Шахар';
@@ -109,6 +110,11 @@ $lang['namangan'] = 'Наманган';
 $lang['andijan'] = 'Андижон';
 $lang['nurafshon'] = 'Нурафшон';
 $lang['button_send'] = 'Юбориш';
+
+// search
+$lang['smart_assistent'] = 'Смарт Ёрдамчи';
+$lang['search_sistem'] = 'Смарт Кидирув';
+
 
 
 
