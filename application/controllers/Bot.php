@@ -196,10 +196,12 @@ class Bot extends CI_Controller{
 		sleep(5);
 		$this->worker();
 		sleep(5);
+		$this->worker();
+		sleep(5);
 	}
 	public function worker()
 	{
-		$messages = $this->db->where('processed', 0)->where('in',1)->limit(3)->order_by('id','desc')->get('bot')->result();
+		$messages = $this->db->where('processed', 0)->where('in',1)->limit(2)->order_by('id','desc')->get('bot')->result();
 		foreach($messages as $item){
 			$response_text = $this->data_lib->analyzeAndSendResponse($item->message);
 

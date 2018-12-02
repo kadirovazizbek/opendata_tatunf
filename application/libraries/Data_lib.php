@@ -195,7 +195,7 @@ class Data_lib{
 
                 $response_text = "";
                 foreach ($hotels as $h) {
-                    if($city == 'Samarkand') $text .= "\r\n".$h->name." ".$h->level."(".$h->tel.")";
+                    if($city == 'Samarkand') $response_text .= "\r\n".$h->name." ".$h->level."(".$h->tel.")";
                     else $response_text .= "\r\n".$h->name." (".$h->tel.")";
                 }
                 

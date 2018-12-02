@@ -95,7 +95,7 @@ div#bs-example-navbar-collapse-1 {
 	color:#fff;
 	font-size:1em;
 	text-decoration:none;
-	font-family: 'Pacifico', cursive;
+	font-family: 'Monotype', cursive;
 }
 /*-- top-nav --*/
 .top-nav {
@@ -172,10 +172,10 @@ ul.nav.navbar-nav {
 	 
 }
 .slider-grid h3{
-    color: rgba(35, 184, 6, 0.71);
+    color: rgb(249, 253, 249);
     font-size: 3em;
     margin: 0;
-	font-family: 'Pacifico', cursive;
+	font-family: 'Verdana', cursive;
 	
 }
 .slider-grid p{
@@ -211,7 +211,7 @@ ul.nav.navbar-nav {
     margin: 0;
     font-size: 3em;
     color: #383838;
-	font-family: 'Pacifico', cursive;
+	font-family: 'Monotype', cursive;
 }
 .w3l-about-heading p,.codes-heading p,.w3l-contact-heading p{
 	text-align: center;
@@ -234,7 +234,7 @@ ul.nav.navbar-nav {
     color: rgb(13, 14, 13);
     font-size: 2em;
     margin: 0;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Monotype', cursive;
 	line-height: 7.5em;
 	text-align: center;
 	
@@ -351,7 +351,7 @@ ul.nav.navbar-nav {
     margin: 0;
     font-size: 3em;
     color: #383838;
-	font-family: 'Pacifico', cursive;
+	font-family: 'Monotype', cursive;
 }
 .news-heading p {
     text-align: center;
@@ -673,7 +673,7 @@ ul.nav.navbar-nav {
     margin: 0;
     font-size: 3em;
     color: #FFF;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Monotype', cursive;
 }
 .w3-different-heading p,.agileinfo-team-heading p,.more-bottom-heading p {
     text-align: center;
