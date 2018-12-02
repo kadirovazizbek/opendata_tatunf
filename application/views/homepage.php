@@ -197,12 +197,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="col-md-3 about-grid">
 					<div class="about-grid-info about-grid-info1 effect-1">
-					<a href="<?php echo site_url('#');?>"><h4><?php echo lang('smart_bot');?></h4></a>
+					<a href="<?php echo site_url('https://t.me/TashkentCityAssistantBot');?>"><h4><?php echo lang('smart_bot');?></h4></a>
 					</div>
 				</div>
 				<div class="col-md-3 about-grid">
 					<div class="about-grid-info about-grid-info2 effect-1">
-					<a href="<?php echo site_url('#');?>"><h4><?php echo lang('smart_chat');?></h4></a>
+					<a href="<?php echo site_url('#');?>" class="chat_title_link"><h4><?php echo lang('smart_chat');?></h4></a>
 					</div>
 				</div>
 				<div class="col-md-3 about-grid">
@@ -366,12 +366,12 @@ $preview_name = str_replace(".jpg","_thumbnail.jpg",$pano->path);
 					</div>
 					<div class="footer-grid-info">
 						<ul>
-						<li><a href="homepage"><?php echo lang('menu_home'); ?></a></li>
-						<li><a href="about"><?php echo lang('menu_about'); ?></a></li>
-						<li><a href="services"><?php echo lang('menu_services'); ?></li>
-						<li><a href="codes"><?php echo lang('menu_codes'); ?></a></li>	
-						<li><a href="gallery"><?php echo lang('menu_gallery'); ?></a></li>
-						<li><a href="contact"><?php echo lang('menu_feedback'); ?></a></li>
+						<li class="current"><a href="<?php echo site_url('homepage');?>"><?php echo lang('menu_home');?></a></li>
+							<li class="current"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about');?></a></li>
+							<li class="current"><a href="<?php echo site_url('services');?>"><?php echo lang('menu_services');?></a></li>
+							<li class="current"><a href="<?php echo site_url('codes');?>"><?php echo lang('menu_rooms');?></a></li>
+							<li class="current"><a href="<?php echo site_url('gallery');?>"><?php echo lang('menu_gallery');?></a></li>
+							<li class="current"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
 						</ul>
 					</div>
 				</div>
