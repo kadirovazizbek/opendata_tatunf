@@ -196,7 +196,7 @@ class Data_lib{
                     $hotels = $CI->db->query("select name,tel,addres from `hotel_tashkent` order by id desc limit 5")->result();
             }
             $i = 1;
-            $response_text = "I found this for you:".$city;
+            $response_text = "I found this for you:";
             foreach ($hotels as $h) {
                 if($city == 'Samarkand') $response_text .= "\r\n".($i++).") ".$h->name." ".$h->level."(".$h->tel.") ".$h->address;
                 else $response_text .= "\r\n".$i++.") ".$h->name." (".$h->tel.") ".$h->addres;
