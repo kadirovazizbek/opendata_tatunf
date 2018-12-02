@@ -210,12 +210,12 @@ class Data_lib{
         $y = 69.333828;
         if(is_array($response->intents) && $response->intents[0]->intent == "museum_suggestion"){
 
-            $dolgota[] = $CI->db->query("select lon from `museums_tashkent`;");
-            $shirota[] = $CI->db->query("select lat from `museums_tashkent`;");
+            $dolgota = $CI->db->query("select lon from `museums_tashkent`;")->result_array();
+            $shirota = $CI->db->query("select lat from `museums_tashkent`;")->result_array();
             
             $distance = array();
-            for($i = 1; $i <= $dolgota.length; $i++) {
-                $distance[$i] = sqrt(($x-$dolgota[$i])*($x-$dolgota[$i]) + ($y-$shirota[$i])*($y-$shirota[$i]));
+            for($i = 1; $i <= count($dolgota); $i++) {
+                $distance[$i] = sqrt(($x-$dolgota[$i])*($x-$dolgota[$i])) + sqrt(($y-$shirota[$i])*($y-$shirota[$i]));
             }
 
             asort($distance);
