@@ -150,12 +150,11 @@ class Data_lib{
         $response = json_decode($this->watson($text));
         //print_r($response);
         $response_text = "";
-        $city = "";
-        $price = "";
+        $city = "Tashkent";
+        $price = "expensive";
         if(is_array($response->intents) && $response->intents[0]->intent == "hotel_suggestion"){
             if(is_array($response->entities) && count($response->entities)>0){
-                $city = "Tashkent";
-                $price = "expensive";
+
                 foreach($response->entities as $entity){
                     //print_r($entity);
                     if($entity->entity == 'city'){
