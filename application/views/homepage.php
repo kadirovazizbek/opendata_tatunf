@@ -395,6 +395,7 @@ $preview_name = str_replace(".jpg","_thumbnail.jpg",$pano->path);
 			</div>
 		</div>
 	</div>
+	<?php $this->load->view('chat');?>
 	<!-- //footer -->
 	<script src="/assets/js/SmoothScroll.min.js"></script>
 	<script src="/assets/build/vrview.js"></script>
