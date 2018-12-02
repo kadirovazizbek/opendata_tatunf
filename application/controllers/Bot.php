@@ -203,11 +203,12 @@ class Bot extends CI_Controller{
 			$response_text = $this->data_lib->analyzeAndSendResponse($item->message);
 
 			$this->bot_lib->send_message($item->chat_id, $response_text);
-			
+			echo $this->db->last_query();
 			$update = [
 				'processed' => 1,
 			];
 			$this->db->where('id', $item->id)->update('bot', $update);
+			echo $this->db->last_query();
 		}
 		//print_r($messages);
 	}
