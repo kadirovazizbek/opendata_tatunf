@@ -1,8 +1,8 @@
 <div class="chat">
-<div class="chat_title">Web-chat</div>
+<div class="chat_title"><?php echo lang('smart_chat');?></div>
 <div id="chat_window">
 </div>
-<input type="text" id="message_field"><button type="button" id="send">Send</button>
+<input type="text" id="message_field"><button type="button" id="send"><?php echo lang('button_send'); ?></button>
 </div>
 <script>
 $(document).ready(function(){
