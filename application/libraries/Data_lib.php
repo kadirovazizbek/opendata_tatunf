@@ -204,6 +204,36 @@ class Data_lib{
             }
             
         }
+
+
+        $x = 41.3384986;
+        $y = 69.333828;
+        if(is_array($response->intents) && $response->intents[0]->intent == "museum_suggestion"){
+
+            $dolgota[] = $CI->db->query("select lon from `museums_tashkent`;");
+            $shirota[] = $CI->db->query("select lat from `museums_tashkent`;");
+            
+            $distance = array();
+            for($i = 1; $i <= $dolgota.length; $i++) {
+                $distance[$i] = sqrt(($x-$dolgota[$i])*($x-$dolgota[$i]) + ($y-$shirota[$i])*($y-$shirota[$i]));
+            }
+
+            asort($distance);
+
+            $museums="";
+            foreach ($distance as $key) {
+                $museums .= $CI->db->query("select title from `museums_tashkent` where id = $key")." ".$CI->db->query("select addres from `museums_tashkent` where id = $key")." ".$CI->db->query("select phone_number from `museums_tashkent` where id = $key");
+            }
+
+            $response_text ="";
+            $response_text .= $museums;
+            //$CI->bot_lib->send_message($item->chat_id, $price . " " . $city . " hotels: ");
+        }
+            
+        
+
+
+
         return $response_text;
     }
 }
