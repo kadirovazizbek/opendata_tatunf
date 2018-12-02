@@ -257,7 +257,7 @@ $(document).ready(function(e) {
 				<div class="clearfix"> </div>
 			</div>
 			<div class="copyright">
-				<p>© 2018 Open Data . All Rights Reserved | Design by <a href="#"> TATU NF TEAM</a> </p>
+				<p><?php echo lang('copyright');?></a> </p>
 			</div>
 		</div>
 	</div>
