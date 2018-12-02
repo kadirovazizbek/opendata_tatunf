@@ -193,7 +193,7 @@ class Data_lib{
                         $hotels = $CI->db->query("select name,tel from `hotel_tashkent` order by id desc limit 5")->result();
                 }
 
-                $response_text = "";
+                $response_text = "I found this for you:";
                 foreach ($hotels as $h) {
                     if($city == 'Samarkand') $response_text .= "\r\n".$h->name." ".$h->level."(".$h->tel.")";
                     else $response_text .= "\r\n".$h->name." (".$h->tel.")";
@@ -206,9 +206,9 @@ class Data_lib{
         }
         elseif(is_array($response->intents) && isset($response->intents[0]) && $response->intents[0]->intent == "museum_suggestion"){
             $x = 41.338479;
-        $y = 69.334615;
+            $y = 69.334615;
         
-            $response_text = "";
+            $response_text = "I found this for you:";
             $museums = $CI->db->get('museums_tashkent')->result_array();
             $distances = array();
             foreach($museums as $item){
