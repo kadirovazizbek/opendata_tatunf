@@ -143,8 +143,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="item active">
 					<div class="slider">
 						<div class="carousel-caption kb_caption slider-grid">
-							<h3>Smart Chat</h3>
-							<p>Smart chat for you</p>
+							<h3><?php echo lang('smart_chat');?></h3>
+							
 						</div>
 					</div>
                 </div>
@@ -153,8 +153,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="item">
 					<div class="slider slider1">
 						<div class="carousel-caption kb_caption kb_caption_right slider-grid">
-							<h3>Smart Idea's</h3>
-							<p>Smart idea's for smart technologies.</p>
+							<h3><?php echo lang('smart_idea');?></h3>
+						
 						</div>
 					</div>
                 </div>
@@ -164,7 +164,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="slider slider2">
 						<div class="carousel-caption kb_caption kb_caption_center slider-grid">
 						   <h3><?php echo lang('smart_city');?></h3>
-							<p>Smart City and smart technologies</p>
+							
 						</div>
 					</div>
                 </div>
