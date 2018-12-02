@@ -29,9 +29,11 @@ $(document).ready(function(){
     });
     $(".chat_title").click(function(){
         $("#chat_window").toggle('fast');
+        return false;
     });
     $(".chat_title_link").click(function(){
         $("#chat_window").toggle('fast');
+        return false;
     });
 });
 </script>
