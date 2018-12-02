@@ -88,7 +88,7 @@ $(document).ready(function(){
     background:#cfc;
 }
 #message_field{
-    min-width:400px;
+    min-width:200px;
     max-width:79%!important;
 }
 #send{
