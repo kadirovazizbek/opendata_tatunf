@@ -114,6 +114,7 @@ $lang['button_send'] = 'Юбориш';
 // search
 $lang['smart_assistent'] = 'Смарт Ёрдамчи';
 $lang['search_sistem'] = 'Смарт Кидирув';
+$lang['search_find'] = 'Кидирув...';
 
 
 
