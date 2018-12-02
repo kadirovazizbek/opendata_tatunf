@@ -1682,7 +1682,7 @@ button.btn1:hover{
 		min-height: 150px;
 	}
 	.about-grid-info h4 {
-		line-height: 7em;
+		line-height: 3em;
 		font-size: 1.3em;
 	}
 	.about-grid-info:after {
@@ -1799,7 +1799,7 @@ button.btn1:hover{
 		height: 250px;
 	}
 	.about-grid-info h4 {
-		line-height: 9.5em;
+		line-height: 3em;
 		font-size: 2em;
 	}
 	.about-grid-info:after {
@@ -1812,7 +1812,7 @@ button.btn1:hover{
 		min-height: 280px;
 	}
 	.about-grid-info h4 {
-		line-height: 8.5em;
+		line-height: 3em;
 	}
 	.about-grid-info:after {
 		width: 215px;
@@ -2076,7 +2076,7 @@ button.btn1:hover{
 	}
 	.about-grid-info h4 {
 		font-size: 1.5em;
-		line-height: 7.5em;
+		line-height: 3em;
 	}
 	.about-grid-info {
 		min-height: 187px;
@@ -2165,7 +2165,7 @@ button.btn1:hover{
 	}
 	.about-grid-info h4 {
 		font-size: 1.3em;
-		line-height: 7em;
+		line-height: 3em;
 	}
 	.about-grid-info:after {
 		width: 125px;
@@ -2210,7 +2210,7 @@ button.btn1:hover{
 		min-height: 139px;
 	}
 	.about-grid-info h4 {
-		line-height: 6em;
+		line-height: 3em;
 	}
 	.about-grid-info:after {
 		width: 120px;
@@ -2332,7 +2332,7 @@ button.btn1:hover{
 		background-size: 72%;
 	}
 	.about-grid-info h4 {
-		line-height: 7em;
+		line-height: 3em;
 		font-size: 1.5em;
 	}
 	.about-grid-info:after {
