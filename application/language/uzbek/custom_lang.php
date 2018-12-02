@@ -108,6 +108,7 @@ $lang['fergana'] = 'Фаргона';
 $lang['namangan'] = 'Наманган';
 $lang['andijan'] = 'Андижон';
 $lang['nurafshon'] = 'Нурафшон';
+$lang['button_send'] = 'Юбориш';
 
 
 

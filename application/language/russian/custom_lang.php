@@ -122,3 +122,4 @@ $lang['andijan'] = 'Андижан';
 $lang['nurafshon'] = 'Нурафшан';
 
 
+$lang['button_send'] = 'Отправить';

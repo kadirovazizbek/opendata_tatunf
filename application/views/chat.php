@@ -1,5 +1,5 @@
 <div class="chat">
-<div class="chat_title">Web-chat</div>
+<div class="chat_title"><?php echo lang('smart_chat');?></div>
 <div id="chat_window">
 </div>
 <div class="form-inline">
