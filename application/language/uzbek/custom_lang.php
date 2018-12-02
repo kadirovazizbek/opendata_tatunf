@@ -91,6 +91,24 @@ $lang['smart_bot'] = 'Смарт Бот';
 $lang['temperature'] = 'Об-хаво';
 $lang['smart_idea'] = 'Смарт Идея';
 
+//temperatura
+$lang['city'] = 'Город';
+$lang['tashkent'] = 'Тошкент';
+$lang['gradus'] = 'Градус  °C';
+$lang['nukus'] = 'Нукус';
+$lang['urgench'] = 'Ургенч';
+$lang['bukhara'] = 'Бухоро';
+$lang['navoiy'] = 'Навоий';
+$lang['samarkand'] = 'Самарканд';
+$lang['jizzax'] = 'Жиззах';
+$lang['gulistan'] = 'Гулистон';
+$lang['qarshi'] = 'Карши';
+$lang['termez'] = 'Термиз';
+$lang['fergana'] = 'Фаргона';
+$lang['namangan'] = 'Наманган';
+$lang['andijan'] = 'Андижон';
+$lang['nurafshon'] = 'Нурафшон';
+
 
 
 
