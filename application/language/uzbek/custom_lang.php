@@ -115,6 +115,7 @@ $lang['button_send'] = 'Юбориш';
 $lang['smart_assistent'] = 'Смарт Ёрдамчи';
 $lang['search_sistem'] = 'Смарт Кидирув';
 $lang['search_find'] = 'Кидирув...';
+$lang['inha'] = 'Тошкент Инха Университети';
 
 
 

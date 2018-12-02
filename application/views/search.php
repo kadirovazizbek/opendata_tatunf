@@ -1,6 +1,24 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link rel="icon" type="image/x-icon" href="/assets/images/ico.png" />
+<!-- bootstrap-css -->
+<link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="all" />
+<!--// css -->
+<link rel="stylesheet" href="/assets/css/ken-burns.css">
+<!-- font-awesome icons -->
+<link href="/assets/css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!-- font -->
+<link href='//fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<!-- //font -->
+<script src="/assets/js/jquery-1.11.1.min.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
 <meta charset="utf-8">
 
 <style>
@@ -77,27 +95,173 @@ $(document).ready(function(e) {
 </script>
 </head>
 <body>
-
+	<!-- banner -->
+	<div class="banner">
+		<div class="top-banner">
+			<div class="container">
+				<div class="top-banner-left">
+					<ul>
+						<li> TATU NF TEAM</li>
+						
+					</ul>
+				</div>
+				<div class="top-banner-right">
+					<ul>
+						<li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a class="facebook" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a class="facebook" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+						<li><a class="facebook" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="container">
+				<div class="logo">
+					<h1>
+						<a href="homepage"><?php echo lang('smart_city');?></a>
+					</h1>
+				</div>
+				<div class="top-nav">
+					<nav class="navbar navbar-default">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu						
+							</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+							<li class="current"><a href="<?php echo site_url('homepage');?>"><?php echo lang('menu_home');?></a></li>
+							<li class="current"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about');?></a></li>
+							<li class="current"><a href="<?php echo site_url('services');?>"><?php echo lang('menu_services');?></a></li>
+							<li class="current"><a href="<?php echo site_url('codes');?>"><?php echo lang('menu_rooms');?></a></li>
+							<li class="current"><a href="<?php echo site_url('gallery');?>"><?php echo lang('menu_gallery');?></a></li>
+							<li class="current"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
+							<li><?php echo anchor($this->lang->switch_uri('ru'),'<img width="30" src="/assets/images/ru-flag.png">') ;?></li>
+					  	<li><?php echo anchor($this->lang->switch_uri('uz'),'<img width="30"  src="/assets/images/uz-flag.png">');?></li> 
+								<div class="clearfix"> </div>
+							</ul>	
+						</div>	
+					</nav>		
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	</div>
 <!-- Сам код формы (вставляется непосредственно в страницу) -->
+<div class="row">
 <div class="container">
-<div class="col-md-12"></br></br></br></br></br></br></br></br></br></br><h1>
+<div class="col-md-12"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><h1>
 <?php echo lang('search_sistem');?></h1>
 
 <form action="" method="post" id="search-block-form">
       <div class="form-item">
-        <input type="text" name="" value="" size="15" maxlength="128" placeholder="<?php echo lang('search_find');?>">
+        <input type="text" name="q" value="" size="15" maxlength="128" placeholder="<?php echo lang('search_find');?>">
       </div>
       <div class="form-actions">
         <input type="submit" id="edit-submit" name="op" value="Поиск" class="form-submit">
-		
+	
       </div>
-	  </br>
+		
+	  
+      </div>
+	 
 	  
 		
-		<h1><?php echo lang('smart_assistent');?></h1>
+		
 </form>
+<table class="table table-bordered" style="background:white">
+<?php if(isset($museums)):?>
+<?php foreach($museums as $item):?>
+<tr>
+<td><?php echo $item->title;?></td>
+<td><?php echo $item->address;?></td>
+</tr>
+<?php endforeach;?>
+<?php endif;?>
+
+<?php if(isset($hotels_tashkent)):?>
+<?php foreach($hotels_tashkent as $item):?>
+<tr>
+<td><?php echo $item->name;?></td>
+<td><?php echo $item->addres;?></td>
+</tr>
+<?php endforeach;?>
+<?php endif;?>
+
+<?php if(isset($hotels_samarkand)):?>
+<?php foreach($hotels_samarkand as $item):?>
+<tr>
+<td><?php echo $item->name;?></td>
+<td><?php echo $item->address;?></td>
+</tr>
+<?php endforeach;?>
+<?php endif;?>
+
+<?php if(isset($universities)):?>
+<?php foreach($universities as $item):?>
+<tr>
+<td><?php echo $item->otm_nomi;?></td>
+<td></td>
+</tr>
+<?php endforeach;?>
+<?php endif;?>
+</table>
+</div>
 </div>
 </div>
 <!-- Конец -->
+<!-- footer -->
+<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-4 footer-grid">
+					<div class="footer-grid-heading">
+						<h4><?php echo lang('address');?></h4>
+					</div>
+					<div class="footer-grid-info">
+						<p>
+							<span><?php echo lang('inha');?></span>
+						</p>
+						<p class="phone">Phone : +1 123 456 789
+							<span>Email : <a href="mailto:example@email.com">mail@example.com</a></span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4 footer-grid">
+					<div class="footer-grid-heading">
+						<h4><?php echo lang('pages');?></h4>
+					</div>
+					<div class="footer-grid-info">
+						<ul>
+						<li class="current"><a href="<?php echo site_url('homepage');?>"><?php echo lang('menu_home');?></a></li>
+							<li class="current"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about');?></a></li>
+							<li class="current"><a href="<?php echo site_url('services');?>"><?php echo lang('menu_services');?></a></li>
+							<li class="current"><a href="<?php echo site_url('codes');?>"><?php echo lang('menu_rooms');?></a></li>
+							<li class="current"><a href="<?php echo site_url('gallery');?>"><?php echo lang('menu_gallery');?></a></li>
+							<li class="current"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 footer-grid">
+					<div class="footer-grid-heading">
+						<h4><?php echo lang('follow');?></h4>
+					</div>
+					<div class="social">
+						<ul>
+							<li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
+							
+							<li><a href="http://vk.com"><i class="fa fa-vk"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="copyright">
+				<p>© 2018 Open Data . All Rights Reserved | Design by <a href="#"> TATU NF TEAM</a> </p>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
